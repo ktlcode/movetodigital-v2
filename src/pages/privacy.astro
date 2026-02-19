@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ScrollReveal from '../components/ScrollReveal.astro';
+---
+<BaseLayout
+  title="Privacy — Move to Digital"
+  description="Privacy information for movetodigital.au and related applications."
+  canonicalPath="/privacy"
+>
+  <section class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-6">
+      <ScrollReveal>
+        <h1 class="font-[family-name:var(--font-family-heading)] text-4xl md:text-5xl font-normal text-text">
+          Privacy
+        </h1>
+        <p class="text-sm text-text-muted mt-4 mb-12">
+          Last updated: February 2026
+        </p>
+      </ScrollReveal>
+
+      <div class="space-y-10">
+        <ScrollReveal>
+          <section>
+            <h2 class="text-xl font-[family-name:var(--font-family-heading)] font-normal text-text mb-4">
+              This Website
+            </h2>
+            <div class="space-y-4">
+              <p class="text-text leading-relaxed text-base md:text-lg">
+                This is a static portfolio and support website. It does not use cookies, tracking scripts, or analytics. No personal data is collected through browsing this site.
+              </p>
+              <p class="text-text leading-relaxed text-base md:text-lg">
+                If you contact me via email, I'll handle your information with the care you'd expect &mdash; used only to respond to your enquiry, not shared with third parties, and deleted when no longer needed.
+              </p>
+            </div>
+          </section>
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <section>
+            <h2 class="text-xl font-[family-name:var(--font-family-heading)] font-normal text-text mb-4">
+              Applications
+            </h2>
+            <p class="text-text leading-relaxed text-base md:text-lg">
+              My applications (ClientForms.app, WaitingForAMate.com) have their own privacy policies, which are available within each application. The privacy practices of those apps are separate from this website.
+            </p>
+          </section>
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <section>
+            <h2 class="text-xl font-[family-name:var(--font-family-heading)] font-normal text-text mb-4">
+              Contact
+            </h2>
+            <p class="text-text leading-relaxed text-base md:text-lg">
+              If you have questions about privacy practices, contact:
+              <a href="mailto:contact@movetodigital.au" class="text-primary hover:text-primary-dark transition-colors duration-200">contact@movetodigital.au</a>
+            </p>
+          </section>
+        </ScrollReveal>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
