@@ -1,0 +1,89 @@
+---
+import ScrollReveal from './ScrollReveal.astro';
+
+const steps = [
+  {
+    number: 1,
+    title: 'Discovery',
+    description: 'Understanding the problem, the constraints, and the people involved.',
+  },
+  {
+    number: 2,
+    title: 'Architecture',
+    description: 'Designing the solution with security, maintainability, and handover in mind.',
+  },
+  {
+    number: 3,
+    title: 'Build',
+    description: 'Iterative delivery with regular checkpoints. No surprises.',
+  },
+  {
+    number: 4,
+    title: 'Handover',
+    description: 'Documentation, runbooks, and knowledge transfer. You own it completely.',
+  },
+];
+---
+
+<div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+  {/* Desktop: horizontal layout */}
+  <div class="hidden md:grid md:grid-cols-4 md:gap-0 md:items-start">
+    {steps.map((step, i) => (
+      <ScrollReveal delay={i * 100} class="flex flex-col items-center text-center relative">
+        <div class="flex items-center w-full justify-center">
+          {/* Left connector line */}
+          {i > 0 && (
+            <div class="flex-1 h-[2px] bg-border"></div>
+          )}
+          {i === 0 && <div class="flex-1"></div>}
+
+          {/* Numbered circle */}
+          <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-semibold shrink-0">
+            {step.number}
+          </div>
+
+          {/* Right connector line */}
+          {i < steps.length - 1 && (
+            <div class="flex-1 h-[2px] bg-border"></div>
+          )}
+          {i === steps.length - 1 && <div class="flex-1"></div>}
+        </div>
+
+        <h3 class="font-[family-name:var(--font-family-heading)] text-lg mt-4 mb-1 text-text">
+          {step.title}
+        </h3>
+        <p class="text-sm text-text-muted leading-relaxed px-2">
+          {step.description}
+        </p>
+      </ScrollReveal>
+    ))}
+  </div>
+
+  {/* Mobile: vertical layout */}
+  <div class="md:hidden space-y-0">
+    {steps.map((step, i) => (
+      <ScrollReveal delay={i * 100} class="flex items-start gap-4">
+        <div class="flex flex-col items-center shrink-0">
+          {/* Numbered circle */}
+          <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-semibold">
+            {step.number}
+          </div>
+
+          {/* Vertical connector line */}
+          {i < steps.length - 1 && (
+            <div class="w-[2px] h-12 bg-border mt-2"></div>
+          )}
+        </div>
+
+        <div class="pt-1.5 pb-6">
+          <h3 class="font-[family-name:var(--font-family-heading)] text-lg text-text mb-1">
+            {step.title}
+          </h3>
+          <p class="text-sm text-text-muted leading-relaxed">
+            {step.description}
+          </p>
+        </div>
+      </ScrollReveal>
+    ))}
+  </div>
+</div>

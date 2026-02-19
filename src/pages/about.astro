@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
+import ScrollReveal from '../components/ScrollReveal.astro';
+import ContactCTA from '../components/ContactCTA.astro';
+---
+<BaseLayout
+  title="About — Move to Digital"
+  description="Independent automation and integration architect based in Brisbane, Australia. 20+ years in government, utilities, and enterprise environments."
+  canonicalPath="/about"
+>
+  <!-- Page Header -->
+  <section class="py-16 md:py-20">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <ScrollReveal>
+        <h1 class="font-[family-name:var(--font-family-heading)] text-4xl md:text-5xl font-normal text-text">
+          About
+        </h1>
+      </ScrollReveal>
+    </div>
+  </section>
+
+  <!-- Professional Bio -->
+  <section class="pb-16">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      <ScrollReveal>
+        <div class="space-y-6">
+          <p class="text-text leading-relaxed text-base md:text-lg">
+            I'm an automation and integration architect based in Brisbane, Australia, with over 20 years of experience across government, utilities, and enterprise environments.
+          </p>
+          <p class="text-text leading-relaxed text-base md:text-lg">
+            My work focuses on the space between systems &mdash; building secure, event-driven integrations that connect platforms reliably and pass security review. I've delivered across the M365 ecosystem, API development, information governance, and cloud infrastructure.
+          </p>
+          <p class="text-text leading-relaxed text-base md:text-lg">
+            I hold an NV1 security clearance and have worked extensively in environments where compliance and auditability are non-negotiable.
+          </p>
+          <p class="text-text leading-relaxed text-base md:text-lg">
+            I now operate as an independent practice &mdash; Move to Digital &mdash; taking on architecture and delivery engagements, and building my own software products.
+          </p>
+        </div>
+      </ScrollReveal>
+    </div>
+  </section>
+
+  <!-- How I Work -->
+  <section class="bg-bg-alt py-16 md:py-24">
+    <ScrollReveal>
+      <h2 class="font-[family-name:var(--font-family-heading)] text-3xl font-normal text-text text-center mb-12">
+        How I Work
+      </h2>
+    </ScrollReveal>
+    <ProcessSteps />
+  </section>
+
+  <!-- Working Principles -->
+  <section class="py-16">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      <ScrollReveal>
+        <h2 class="font-[family-name:var(--font-family-heading)] text-2xl font-normal text-text mb-8">
+          Principles
+        </h2>
+      </ScrollReveal>
+      <div class="space-y-6">
+        <ScrollReveal>
+          <p class="border-l-2 border-primary pl-4 text-text leading-relaxed text-base md:text-lg">
+            Every engagement includes documentation and runbooks. If I build it, you can maintain it.
+          </p>
+        </ScrollReveal>
+        <ScrollReveal delay={100}>
+          <p class="border-l-2 border-primary pl-4 text-text leading-relaxed text-base md:text-lg">
+            Security review is part of the architecture, not a gate at the end.
+          </p>
+        </ScrollReveal>
+        <ScrollReveal delay={200}>
+          <p class="border-l-2 border-primary pl-4 text-text leading-relaxed text-base md:text-lg">
+            AI-assisted development where it adds genuine value, not as a talking point.
+          </p>
+        </ScrollReveal>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Links -->
+  <section class="pb-12">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 pt-12 border-t border-border">
+      <ScrollReveal>
+        <div class="flex flex-wrap gap-8">
+          <a href="#" class="text-primary hover:text-primary-dark transition-colors duration-200">LinkedIn &rarr;</a>
+          <a href="mailto:contact@movetodigital.au" class="text-primary hover:text-primary-dark transition-colors duration-200">contact@movetodigital.au &rarr;</a>
+        </div>
+      </ScrollReveal>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <ContactCTA />
+</BaseLayout>
