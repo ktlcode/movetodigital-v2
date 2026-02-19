@@ -1,0 +1,70 @@
+---
+const quickLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/case-studies', label: 'Case Studies' },
+  { href: '/about', label: 'About' },
+  { href: '/support', label: 'Support' },
+];
+
+const legalLinks = [
+  { href: '/privacy', label: 'Privacy' },
+  { href: '/security', label: 'Security' },
+];
+---
+
+<footer class="bg-bg-alt border-t border-border">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      {/* Brand column */}
+      <div>
+        <p class="text-lg font-bold text-secondary">Move to Digital</p>
+        <p class="mt-2 text-sm text-text-muted">Automation &amp; Integration Architecture</p>
+      </div>
+
+      {/* Quick links column */}
+      <nav aria-label="Footer quick links">
+        <h3 class="text-sm font-semibold text-secondary uppercase tracking-wider">Quick Links</h3>
+        <ul class="mt-3 space-y-2">
+          {quickLinks.map(link => (
+            <li>
+              <a href={link.href} class="text-sm text-text-muted hover:text-primary transition-colors">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      {/* Legal & contact column */}
+      <div>
+        <nav aria-label="Footer legal links">
+          <h3 class="text-sm font-semibold text-secondary uppercase tracking-wider">Legal</h3>
+          <ul class="mt-3 space-y-2">
+            {legalLinks.map(link => (
+              <li>
+                <a href={link.href} class="text-sm text-text-muted hover:text-primary transition-colors">
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+        <div class="mt-4">
+          <h3 class="text-sm font-semibold text-secondary uppercase tracking-wider">Contact</h3>
+          <a href="mailto:contact@movetodigital.au" class="mt-2 inline-block text-sm text-text-muted hover:text-primary transition-colors">
+            contact@movetodigital.au
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Bottom bar */}
+  <div class="border-t border-border">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-4">
+      <p class="text-center text-sm text-text-muted">
+        &copy; 2026 Move to Digital. ABN Registered.
+      </p>
+    </div>
+  </div>
+</footer>

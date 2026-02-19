@@ -1,0 +1,133 @@
+---
+const currentPath = Astro.url.pathname;
+
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/case-studies', label: 'Case Studies' },
+  { href: '/about', label: 'About' },
+  { href: '/support', label: 'Support' },
+];
+
+function isActive(href: string): boolean {
+  if (href === '/') return currentPath === '/';
+  return currentPath.startsWith(href);
+}
+---
+
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-border">
+  <nav aria-label="Main navigation" class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+    <a href="/" class="text-lg font-bold text-secondary tracking-tight">
+      Move to Digital
+    </a>
+
+    {/* Desktop navigation */}
+    <ul class="hidden md:flex items-center gap-1">
+      {navLinks.map(link => (
+        <li>
+          <a
+            href={link.href}
+            class={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+              isActive(link.href)
+                ? 'text-primary font-semibold border-b-2 border-primary'
+                : 'text-text-muted hover:text-primary hover:bg-bg-alt'
+            }`}
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+      <li>
+        <a
+          href="mailto:contact@movetodigital.au"
+          class="ml-2 px-4 py-2 text-sm font-semibold text-surface bg-primary rounded-lg hover:bg-primary-dark transition-colors"
+        >
+          Contact
+        </a>
+      </li>
+    </ul>
+
+    {/* Mobile hamburger button */}
+    <button
+      id="mobile-menu-btn"
+      type="button"
+      class="md:hidden relative w-10 h-10 flex items-center justify-center rounded-md text-text-muted hover:text-primary hover:bg-bg-alt transition-colors"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <span class="hamburger-lines">
+        <span class="block w-5 h-0.5 bg-current transition-all duration-300 origin-center"></span>
+        <span class="block w-5 h-0.5 bg-current transition-all duration-300 mt-1.5"></span>
+        <span class="block w-5 h-0.5 bg-current transition-all duration-300 mt-1.5"></span>
+      </span>
+    </button>
+  </nav>
+
+  {/* Mobile menu overlay */}
+  <div
+    id="mobile-menu"
+    class="md:hidden fixed inset-0 top-16 bg-surface/98 backdrop-blur-lg z-40 hidden"
+    role="dialog"
+    aria-label="Mobile navigation"
+  >
+    <nav class="flex flex-col items-center justify-center h-full gap-2 -mt-16">
+      {navLinks.map(link => (
+        <a
+          href={link.href}
+          class={`px-6 py-3 text-lg font-medium rounded-lg transition-colors ${
+            isActive(link.href)
+              ? 'text-primary font-semibold'
+              : 'text-text-muted hover:text-primary hover:bg-bg-alt'
+          }`}
+        >
+          {link.label}
+        </a>
+      ))}
+      <a
+        href="mailto:contact@movetodigital.au"
+        class="mt-4 px-8 py-3 text-lg font-semibold text-surface bg-primary rounded-lg hover:bg-primary-dark transition-colors"
+      >
+        Contact
+      </a>
+    </nav>
+  </div>
+</header>
+
+{/* Spacer to offset fixed header */}
+<div class="h-16"></div>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  if (btn && menu) {
+    const lines = btn.querySelectorAll('.hamburger-lines span');
+
+    btn.addEventListener('click', () => {
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!isOpen));
+      btn.setAttribute('aria-label', isOpen ? 'Open menu' : 'Close menu');
+      menu.classList.toggle('hidden');
+
+      // Animate hamburger to X
+      if (!isOpen) {
+        lines[0].style.transform = 'translateY(8px) rotate(45deg)';
+        lines[1].style.opacity = '0';
+        lines[2].style.transform = 'translateY(-8px) rotate(-45deg)';
+        document.body.style.overflow = 'hidden';
+      } else {
+        lines[0].style.transform = '';
+        lines[1].style.opacity = '';
+        lines[2].style.transform = '';
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Close menu on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') {
+        btn.click();
+      }
+    });
+  }
+</script>
