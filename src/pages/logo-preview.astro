@@ -1,0 +1,216 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Logo Preview — Move to Digital" description="Logo concepts for review.">
+  <section class="py-16 px-6 max-w-5xl mx-auto">
+    <h1 class="font-[family-name:var(--font-family-heading)] text-3xl font-bold text-secondary mb-12">Logo Concepts</h1>
+
+    <!-- CONCEPT A: The Circuit M -->
+    <div class="mb-20">
+      <h2 class="font-[family-name:var(--font-family-heading)] text-xl font-semibold text-text-muted mb-6 uppercase tracking-widest text-sm">Concept A — The Circuit M</h2>
+      <p class="text-text-muted mb-8 max-w-xl">The M has a single deliberate "step" in its right stroke — like a circuit board trace changing layers. It's the one detail that makes it memorable. Suggests precision engineering.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+        <!-- Large on white -->
+        <div class="bg-white rounded-2xl border border-border p-12 flex items-center justify-center">
+          <svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-[320px]">
+            <!-- M with circuit step in right leg -->
+            <g fill="none" stroke-linecap="square" stroke-linejoin="miter">
+              <!-- The M mark -->
+              <path d="M 20 100 L 20 20 L 70 65 L 120 20 L 120 52 L 132 52 L 132 100"
+                    stroke="#C2714F" stroke-width="16" fill="none" />
+            </g>
+            <!-- Wordmark -->
+            <text x="160" y="72" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="700" font-size="32" fill="#2D3748" letter-spacing="2">MOVE TO</text>
+            <text x="160" y="106" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="700" font-size="32" fill="#2D3748" letter-spacing="2">DIGITAL</text>
+          </svg>
+        </div>
+
+        <!-- Icon only on white -->
+        <div class="bg-white rounded-2xl border border-border p-12 flex items-center justify-center">
+          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" class="w-32 h-32">
+            <path d="M 15 105 L 15 15 L 60 60 L 105 15 L 105 47 L 117 47 L 117 105"
+                  stroke="#C2714F" stroke-width="14" fill="none" stroke-linecap="square" stroke-linejoin="miter" />
+          </svg>
+        </div>
+
+        <!-- Icon on dark -->
+        <div class="bg-secondary rounded-2xl p-12 flex items-center justify-center">
+          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" class="w-32 h-32">
+            <path d="M 15 105 L 15 15 L 60 60 L 105 15 L 105 47 L 117 47 L 117 105"
+                  stroke="#C2714F" stroke-width="14" fill="none" stroke-linecap="square" stroke-linejoin="miter" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Favicon size test -->
+      <div class="flex items-center gap-6 mt-8">
+        <span class="text-text-muted text-sm">Favicon test:</span>
+        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8">
+          <rect width="120" height="120" rx="24" fill="#2D3748"/>
+          <path d="M 22 100 L 22 20 L 60 58 L 98 20 L 98 44 L 110 44 L 110 100"
+                stroke="#C2714F" stroke-width="16" fill="none" stroke-linecap="square" stroke-linejoin="miter" />
+        </svg>
+        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
+          <rect width="120" height="120" rx="24" fill="#2D3748"/>
+          <path d="M 22 100 L 22 20 L 60 58 L 98 20 L 98 44 L 110 44 L 110 100"
+                stroke="#C2714F" stroke-width="18" fill="none" stroke-linecap="square" stroke-linejoin="miter" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- CONCEPT B: The Gapped M (movement/transition) -->
+    <div class="mb-20">
+      <h2 class="font-[family-name:var(--font-family-heading)] text-xl font-semibold text-text-muted mb-6 uppercase tracking-widest text-sm">Concept B — The Gapped M</h2>
+      <p class="text-text-muted mb-8 max-w-xl">A clean geometric M with a deliberate gap in the right leg — the piece has "moved". The gap represents the transition space between systems. The displaced segment sits slightly offset, suggesting motion.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+        <!-- Large on white -->
+        <div class="bg-white rounded-2xl border border-border p-12 flex items-center justify-center">
+          <svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-[320px]">
+            <g stroke-linecap="square" stroke-linejoin="miter">
+              <!-- Left leg + diagonals (continuous) -->
+              <path d="M 20 100 L 20 20 L 70 65 L 120 20 L 120 48"
+                    stroke="#C2714F" stroke-width="16" fill="none" />
+              <!-- Right leg lower segment — shifted right by 6px, gap of ~12px -->
+              <path d="M 126 66 L 126 100"
+                    stroke="#D4A574" stroke-width="16" fill="none" />
+            </g>
+            <!-- Wordmark -->
+            <text x="160" y="72" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="700" font-size="32" fill="#2D3748" letter-spacing="2">MOVE TO</text>
+            <text x="160" y="106" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="700" font-size="32" fill="#2D3748" letter-spacing="2">DIGITAL</text>
+          </svg>
+        </div>
+
+        <!-- Icon only on white -->
+        <div class="bg-white rounded-2xl border border-border p-12 flex items-center justify-center">
+          <svg viewBox="0 0 130 120" xmlns="http://www.w3.org/2000/svg" class="w-32 h-32">
+            <path d="M 15 105 L 15 15 L 60 60 L 105 15 L 105 50"
+                  stroke="#C2714F" stroke-width="14" fill="none" stroke-linecap="square" stroke-linejoin="miter" />
+            <path d="M 111 68 L 111 105"
+                  stroke="#D4A574" stroke-width="14" fill="none" stroke-linecap="square" />
+          </svg>
+        </div>
+
+        <!-- Icon on dark -->
+        <div class="bg-secondary rounded-2xl p-12 flex items-center justify-center">
+          <svg viewBox="0 0 130 120" xmlns="http://www.w3.org/2000/svg" class="w-32 h-32">
+            <path d="M 15 105 L 15 15 L 60 60 L 105 15 L 105 50"
+                  stroke="#C2714F" stroke-width="14" fill="none" stroke-linecap="square" stroke-linejoin="miter" />
+            <path d="M 111 68 L 111 105"
+                  stroke="#D4A574" stroke-width="14" fill="none" stroke-linecap="square" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-6 mt-8">
+        <span class="text-text-muted text-sm">Favicon test:</span>
+        <svg viewBox="0 0 130 120" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8">
+          <rect x="0" y="0" width="130" height="120" rx="24" fill="#2D3748"/>
+          <path d="M 20 100 L 20 18 L 62 58 L 104 18 L 104 50"
+                stroke="#C2714F" stroke-width="16" fill="none" stroke-linecap="square" stroke-linejoin="miter" />
+          <path d="M 110 66 L 110 100"
+                stroke="#D4A574" stroke-width="16" fill="none" stroke-linecap="square" />
+        </svg>
+        <svg viewBox="0 0 130 120" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
+          <rect x="0" y="0" width="130" height="120" rx="24" fill="#2D3748"/>
+          <path d="M 20 100 L 20 18 L 62 58 L 104 18 L 104 50"
+                stroke="#C2714F" stroke-width="18" fill="none" stroke-linecap="square" stroke-linejoin="miter" />
+          <path d="M 110 66 L 110 100"
+                stroke="#D4A574" stroke-width="18" fill="none" stroke-linecap="square" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- CONCEPT C: The Arrow Wordmark -->
+    <div class="mb-20">
+      <h2 class="font-[family-name:var(--font-family-heading)] text-xl font-semibold text-text-muted mb-6 uppercase tracking-widest text-sm">Concept C — The Arrow Wordmark</h2>
+      <p class="text-text-muted mb-8 max-w-xl">No icon — the logo IS the wordmark. "MOVE" in slate, a terracotta arrow replacing "TO", and "DIGITAL" in slate. The arrow is the brand mark. Impossible to forget what the company does.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <!-- On white -->
+        <div class="bg-white rounded-2xl border border-border p-12 flex items-center justify-center">
+          <svg viewBox="0 0 520 50" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-[480px]">
+            <text x="0" y="38" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="800" font-size="40" fill="#2D3748" letter-spacing="3">MOVE</text>
+            <!-- Arrow replacing "TO" -->
+            <line x1="172" y1="25" x2="230" y2="25" stroke="#C2714F" stroke-width="5" stroke-linecap="round" />
+            <polyline points="220,15 232,25 220,35" stroke="#C2714F" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+            <text x="248" y="38" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="800" font-size="40" fill="#2D3748" letter-spacing="3">DIGITAL</text>
+          </svg>
+        </div>
+
+        <!-- On dark -->
+        <div class="bg-secondary rounded-2xl p-12 flex items-center justify-center">
+          <svg viewBox="0 0 520 50" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-[480px]">
+            <text x="0" y="38" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="800" font-size="40" fill="#FAFAF7" letter-spacing="3">MOVE</text>
+            <line x1="172" y1="25" x2="230" y2="25" stroke="#C2714F" stroke-width="5" stroke-linecap="round" />
+            <polyline points="220,15 232,25 220,35" stroke="#C2714F" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+            <text x="248" y="38" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="800" font-size="40" fill="#FAFAF7" letter-spacing="3">DIGITAL</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Compact version for nav -->
+      <div class="mt-8">
+        <span class="text-text-muted text-sm block mb-3">Nav header size:</span>
+        <div class="bg-surface/90 border border-border rounded-xl px-6 py-4 inline-flex items-center">
+          <svg viewBox="0 0 520 50" xmlns="http://www.w3.org/2000/svg" class="h-6">
+            <text x="0" y="38" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="800" font-size="40" fill="#2D3748" letter-spacing="3">MOVE</text>
+            <line x1="172" y1="25" x2="230" y2="25" stroke="#C2714F" stroke-width="5" stroke-linecap="round" />
+            <polyline points="220,15 232,25 220,35" stroke="#C2714F" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+            <text x="248" y="38" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="800" font-size="40" fill="#2D3748" letter-spacing="3">DIGITAL</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Favicon for arrow concept: just the arrow in a squircle -->
+      <div class="flex items-center gap-6 mt-8">
+        <span class="text-text-muted text-sm">Favicon (arrow only):</span>
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8">
+          <rect width="64" height="64" rx="14" fill="#2D3748"/>
+          <line x1="16" y1="32" x2="44" y2="32" stroke="#C2714F" stroke-width="6" stroke-linecap="round" />
+          <polyline points="36,22 48,32 36,42" stroke="#C2714F" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
+          <rect width="64" height="64" rx="14" fill="#2D3748"/>
+          <line x1="14" y1="32" x2="44" y2="32" stroke="#C2714F" stroke-width="8" stroke-linecap="round" />
+          <polyline points="34,20 50,32 34,44" stroke="#C2714F" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Size comparison strip -->
+    <div class="border-t border-border pt-12">
+      <h2 class="font-[family-name:var(--font-family-heading)] text-xl font-semibold text-text-muted mb-8 uppercase tracking-widest text-sm">Side by Side — Dark Background</h2>
+      <div class="bg-secondary rounded-2xl p-12 grid grid-cols-1 md:grid-cols-3 gap-12 items-center justify-items-center">
+        <!-- A -->
+        <div class="text-center">
+          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" class="w-20 h-20 mx-auto mb-3">
+            <path d="M 15 105 L 15 15 L 60 60 L 105 15 L 105 47 L 117 47 L 117 105"
+                  stroke="#C2714F" stroke-width="14" fill="none" stroke-linecap="square" stroke-linejoin="miter" />
+          </svg>
+          <span class="text-white/50 text-xs uppercase tracking-widest">Circuit M</span>
+        </div>
+        <!-- B -->
+        <div class="text-center">
+          <svg viewBox="0 0 130 120" xmlns="http://www.w3.org/2000/svg" class="w-20 h-20 mx-auto mb-3">
+            <path d="M 15 105 L 15 15 L 60 60 L 105 15 L 105 50"
+                  stroke="#C2714F" stroke-width="14" fill="none" stroke-linecap="square" stroke-linejoin="miter" />
+            <path d="M 111 68 L 111 105"
+                  stroke="#D4A574" stroke-width="14" fill="none" stroke-linecap="square" />
+          </svg>
+          <span class="text-white/50 text-xs uppercase tracking-widest">Gapped M</span>
+        </div>
+        <!-- C -->
+        <div class="text-center">
+          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="w-20 h-20 mx-auto mb-3">
+            <line x1="12" y1="32" x2="44" y2="32" stroke="#C2714F" stroke-width="6" stroke-linecap="round" />
+            <polyline points="36,22 48,32 36,42" stroke="#C2714F" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span class="text-white/50 text-xs uppercase tracking-widest">Arrow</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</BaseLayout>
