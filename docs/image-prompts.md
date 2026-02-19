@@ -7,60 +7,72 @@ Take these prompts to Google Gemini Imagen. Each prompt is fully self-contained 
 ## 0. Brand Logo — Primary Wordmark + Icon
 
 ```
-Design a professional logo for "Move to Digital" — an independent automation and integration architecture practice based in Australia. The practice specialises in connecting enterprise systems securely: building middleware, APIs, and event-driven bridges between platforms. The logo must communicate precision, connection, and technical authority — NOT nature, adventure, mountains, sunrises, or generic digital transformation.
+Design a professional logo for "Move to Digital" — an independent automation and integration architecture practice based in Australia. The logo must communicate precision, structure, and technical authority.
 
-CONCEPT DIRECTION — the logomark (icon) should:
-- Be built from the letter "M" but constructed using a visual metaphor of integration: two distinct systems (represented as simple geometric nodes or endpoints) connected by a bridge, pathway, or routing line that forms the shape of the letter "M"
-- The "M" should be readable as a letter first, with the integration/connection concept as a secondary "aha" — not the other way around
-- Think of it as: the left leg of the "M" is one system, the right leg is another system, and the centre peak is the bridge/integration point connecting them
-- The connection point (centre peak of the "M") could be subtly emphasised with the Honey Accent colour (#D4A574) while the two legs use Primary Terracotta (#C2714F), suggesting two systems being joined
-- Alternatively, the "M" could be formed from three connected nodes (circles at the base and peak) joined by clean angled lines — like a simplified network graph that happens to form an "M"
-- The overall form should be geometric, clean, and symmetrical
-- Stroke-based construction (consistent line weight) is preferred over filled/solid shapes
-- If using nodes (circles at connection points), they should be small and precise — 3-4 nodes maximum
+CONCEPT DIRECTION — the logomark (icon):
+The logomark is a SOLID, FILLED, BLOCKY letter "M" constructed entirely from straight lines and sharp angles on a strict geometric grid. This is NOT a clever conceptual logo — it is a clean, confident, architectural letterform. Think of how a structural engineer would draw the letter M: precise, load-bearing, no decoration.
 
-WORDMARK — the text "MOVE TO DIGITAL" should:
-- Appear below the logomark
+EXACT GEOMETRIC CONSTRUCTION of the "M":
+- The M is built from FIVE solid rectangular bars/strokes of equal width, arranged to form the letter
+- Two vertical bars on the far left and far right (the outer legs)
+- Two diagonal bars angling inward from the top of each outer leg, meeting at the centre bottom
+- The diagonals meet at a sharp V-point at approximately 40% of the total height from the bottom
+- ALL corners are sharp 90-degree or precise angled cuts — NO rounded corners, NO rounded terminals, NO circles, NO curves of any kind
+- The stroke width of each bar should be approximately 15-18% of the total letter width
+- The overall proportions should be slightly wider than tall (ratio approximately 1.15:1)
+- The letter should feel SOLID and HEAVY — like it's carved from stone or milled from metal
+
+WHAT THE "M" MUST NOT LOOK LIKE:
+- Must NOT have rounded ends, circular terminals, or dots at any point — this makes it look like human figures or body parts
+- Must NOT have curved strokes — curves make it look organic/human
+- Must NOT look like mountains, peaks, or a heartbeat monitor line
+- Must NOT look like two people, stick figures, legs, or any human form when viewed from any angle or orientation
+- Must NOT use thin or delicate strokes — it must feel substantial and architectural
+- Every edge must be a clean straight cut
+
+COLOUR APPLICATION on the logomark:
+- The entire M is filled in Primary Terracotta (#C2714F) as a single solid colour
+- No colour variations, no two-tone, no accent colours on the mark itself
+- The M should read as one unified, confident shape
+
+WORDMARK — the text "MOVE TO DIGITAL":
+- Appears below the logomark (stacked version) or to the right (horizontal version)
 - Use a bold geometric sans-serif font similar to Plus Jakarta Sans Bold or DM Sans Bold
-- Be set in Deep Slate (#2D3748)
+- All uppercase: "MOVE TO DIGITAL" as a single line
+- Set in Deep Slate (#2D3748)
 - Letter-spacing: slightly expanded (+2-3% tracking) for a clean, airy feel
-- "MOVE TO DIGITAL" as a single line, all uppercase
-- Optionally, "MOVE TO" in regular weight and "DIGITAL" in bold weight for subtle emphasis — but only if it looks natural, not forced
+- The wordmark should be noticeably lighter in visual weight than the logomark — it supports, not competes
 
-COLOUR PALETTE — use ONLY these colours, no others:
-- Primary Terracotta: #C2714F (warm rust-brown) — primary colour for the logomark
-- Honey Accent: #D4A574 (warm golden-brown) — accent for the connection/bridge point only
-- Deep Slate: #2D3748 (dark blue-grey) — for the wordmark text
-- These three colours only. No teal, no cyan, no bright blue, no green, no purple.
+COLOUR PALETTE — use ONLY these three colours, no others:
+- Primary Terracotta: #C2714F (warm rust-brown) — the logomark only
+- Deep Slate: #2D3748 (dark blue-grey) — the wordmark text only
+- White: #FFFFFF — the background only
+- No honey, no gold, no accent colours. Two colours plus white. That's it.
 
 VISUAL STYLE:
-- Flat, geometric, vector-style — as if designed in Adobe Illustrator with the pen tool
-- No 3D effects, no gradients, no shadows, no gloss, no glow
-- No texture or grain on the logo itself (unlike the background images — logos must be clean vectors)
-- Consistent stroke weight if stroke-based; consistent visual weight if filled
-- Must work at small sizes (32px favicon) and large sizes (header on a website)
-- Must work on both white (#FFFFFF) and warm off-white (#FAFAF7) backgrounds
-- Must work in single-colour (all Deep Slate) for monochrome applications
+- Flat, geometric, vector-style — as if constructed in Adobe Illustrator using only the rectangle tool and the rotate tool
+- Absolutely no 3D effects, no gradients, no shadows, no gloss, no glow, no texture, no grain
+- The logo must look like it could be cut from a single sheet of metal with a laser
+- Must work at small sizes (32px favicon — the M shape must still be recognisable) and large sizes (website header)
+- Must work on both pure white (#FFFFFF) and warm off-white (#FAFAF7) backgrounds
+- Must work as single-colour Deep Slate (#2D3748) for monochrome printing
 
-LAYOUT — produce TWO versions:
-1. STACKED: logomark centred above the wordmark, vertical arrangement, suitable for square or portrait spaces
-2. HORIZONTAL: logomark to the left of the wordmark, inline arrangement, suitable for website navigation headers
-
-DIMENSIONS:
-- Stacked version: 1200 x 1200 px, square, white background (#FFFFFF), PNG
-- Horizontal version: 2400 x 600 px, landscape, white background (#FFFFFF), PNG
-- Ensure generous padding around the logo (at least 15% of width on each side)
+LAYOUT — produce the STACKED version only:
+- Logomark centred above the wordmark
+- Vertical arrangement, suitable for square spaces
+- Dimensions: 1200 x 1200 px, square, white background (#FFFFFF), PNG
+- Generous padding: at least 20% of width on each side
+- The logomark should occupy roughly the top 45% of the composition, wordmark in the lower portion
 
 CRITICAL REQUIREMENTS:
-- The logomark must be immediately readable as the letter "M"
-- The integration/connection concept should be a subtle layer of meaning, not the primary read
-- Must NOT look AI-generated — no over-smoothed curves, no unnecessary complexity, no meaningless swooshes
-- Must NOT resemble: mountains, peaks, waves, sunrises, sunsets, globes, arrows, shields, or any other overused logo cliché
-- Must feel like it was designed by a human typographer/brand designer with 10+ years of experience
-- The overall impression should be: "precise, warm, confident, technical"
-- Compare against logos from Thoughtworks, Palantir, Stripe, HashiCorp for tone (serious technology practice) — do NOT copy their designs, just match the level of restraint and intentionality
+- The M must be IMMEDIATELY and UNAMBIGUOUSLY readable as the letter M by anyone, in any context, at any size, from any distance
+- There must be absolutely zero possibility of the shape being mistaken for human figures, body parts, mountains, or any other object
+- Every single edge and corner must be a clean, straight, sharp cut — zero curves
+- The logo must feel like it was designed by a Swiss typographer who values precision above cleverness
+- The overall impression: "solid, warm, architectural, precise" — like a building you'd trust to stand for decades
+- Reference the restraint of: IBM's 8-bar logo, Stripe's wordmark, Linear's logomark, Vercel's triangle — match that level of geometric discipline. Do NOT copy any of these designs.
 
-NEVER INCLUDE: gradients, shadows, 3D effects, gloss, glow, stock imagery, decorative flourishes, organic/natural shapes, illustrations, mascots, icons that don't relate to integration architecture, or any colours outside the three specified above.
+NEVER INCLUDE: curves, rounded corners, rounded terminals, circles, dots, nodes, organic shapes, gradients, shadows, 3D effects, gloss, glow, texture, grain, decorative elements, swooshes, flourishes, illustrations, or any colours outside the three specified above (terracotta, slate, white).
 ```
 
 ---
