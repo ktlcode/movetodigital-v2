@@ -1,20 +1,5 @@
 ---
-const apps = [
-  {
-    icon: 'https://cdn.lordicon.com/puvaffet.json',
-    name: 'ClientForms.app',
-    description: 'Clinician-facing assessment workflow tool',
-    status: 'In Production',
-    statusClasses: 'bg-green-100 text-green-800',
-  },
-  {
-    icon: 'https://cdn.lordicon.com/hrqwmutt.json',
-    name: 'WaitingForAMate.com',
-    description: 'Community referral app',
-    status: 'In Production',
-    statusClasses: 'bg-green-100 text-green-800',
-  },
-];
+import AppCard from './AppCard.astro';
 ---
 
 <section class="py-16 md:py-24 bg-bg">
@@ -29,27 +14,22 @@ const apps = [
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-      {apps.map((app) => (
-        <div class="bg-surface rounded-2xl border border-border p-6 md:p-8 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300">
-          <div class="flex items-start justify-between mb-4">
-            <lord-icon
-              src={app.icon}
-              trigger="hover"
-              colors="primary:#C2714F,secondary:#2D3748"
-              style="width:56px;height:56px"
-            />
-            <span class={`text-xs font-medium rounded-full px-3 py-1 ${app.statusClasses}`}>
-              {app.status}
-            </span>
-          </div>
-          <h3 class="font-[family-name:var(--font-family-heading)] text-xl font-semibold text-secondary mb-2">
-            {app.name}
-          </h3>
-          <p class="text-text-muted text-sm leading-relaxed">
-            {app.description}
-          </p>
-        </div>
-      ))}
+      <AppCard
+        icon="https://cdn.lordicon.com/puvaffet.json"
+        name="ClientForms.app"
+        description="Clinician-facing assessment workflow tool"
+        status="In Production"
+        statusColor="green"
+        url="clientforms.app"
+      />
+      <AppCard
+        icon="https://cdn.lordicon.com/hrqwmutt.json"
+        name="WaitingForAMate.com"
+        description="Community referral app"
+        status="In Production"
+        statusColor="green"
+        url="waitingforamate.com"
+      />
     </div>
 
     <div class="text-center mt-10">
