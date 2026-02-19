@@ -3,7 +3,7 @@ import ScrollReveal from './ScrollReveal.astro';
 
 const engagements = [
   {
-    title: 'Event-driven integration',
+    title: 'Event-driven integration and middleware',
     body: 'Connecting platforms (security systems, line-of-business apps, cloud services) through secure middleware with real-time event processing and alerting.',
   },
   {
@@ -11,13 +11,25 @@ const engagements = [
     body: 'Replacing manual processes with structured digital workflows. Automated scoring, routing, notifications, and audit trails.',
   },
   {
-    title: 'AI workflow integration',
+    title: 'Copilot and AI workflow integration',
     body: 'Embedding AI capabilities (document intelligence, Copilot-style assistants, classification) into enterprise workflows with appropriate governance and human-in-loop controls.',
   },
   {
-    title: 'Secure notification pipelines',
+    title: 'Secure notification systems',
     body: 'mTLS, OAuth2, bearer token management, and least-privilege patterns for cross-platform messaging and alerting.',
   },
+  {
+    title: 'Rules engines and human-in-the-loop',
+    body: 'Configurable business rules with operator dashboards. Automated actions with human oversight gates for high-stakes decisions.',
+  },
+];
+
+const outcomes = [
+  'Auditability across every automated action and integration touchpoint',
+  'Predictable integration reliability with built-in error handling and retry logic',
+  'Security review readiness \u2014 architecture designed to pass, not patch',
+  'Reduced operational friction through structured automation of manual workflows',
+  'Extensibility \u2014 solutions designed for additional channels, tenants, and data sources',
 ];
 
 const governance = [
@@ -45,11 +57,27 @@ const governance = [
     <ScrollReveal>
       <div class="mb-12">
         <h2 class="font-[family-name:var(--font-family-heading)] text-3xl font-semibold text-secondary mb-3">
-          Enterprise Automation
+          Enterprise Automation for AI-Enabled Systems
         </h2>
-        <p class="text-text-muted max-w-3xl">
-          I architect and build automation solutions that connect enterprise systems securely, embed AI where it adds genuine value, and pass security review in regulated environments.
+        <p class="text-text-muted max-w-3xl mb-8">
+          I design, deliver, and operationalise automation architectures that connect enterprise systems securely. AI is embedded where it adds genuine value &mdash; always with governance controls, human oversight, and auditability appropriate to the environment.
         </p>
+        <div>
+          <h3 class="font-[family-name:var(--font-family-heading)] text-lg font-semibold text-secondary mb-4 flex items-center gap-2">
+            <span class="inline-block w-8 h-[2px] bg-primary"></span>
+            What Organisations Gain
+          </h3>
+          <ul class="space-y-2 max-w-2xl">
+            {outcomes.map((item) => (
+              <li class="flex gap-2 text-text text-sm leading-relaxed">
+                <span class="text-primary mt-0.5 shrink-0">
+                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                </span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </ScrollReveal>
 
