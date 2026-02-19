@@ -1,12 +1,11 @@
-<svg viewBox="0 0 182 120" xmlns="http://www.w3.org/2000/svg">
-  <rect width="182" height="120" rx="24" fill="#2D3748"/>
+<svg viewBox="0 0 480 120" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <clipPath id="m-clip">
       <rect x="0" y="5" width="182" height="115" />
     </clipPath>
   </defs>
   <path d="M 15 115 L 15 -15 L 65 58 L 115 -15 L 115 44"
-        stroke="#C2714F" stroke-width="26" fill="none"
+        stroke="#C2714F" stroke-width="24" fill="none"
         stroke-linejoin="miter" stroke-linecap="butt"
         clip-path="url(#m-clip)" />
   <rect x="103" y="44" width="24" height="71" fill="#D4A574" opacity="0.15"
@@ -19,4 +18,6 @@
            C 144,69 151,75 151,84
            C 151,93 144,99 133,99 Z"
         fill="#D4A574" fill-rule="evenodd" />
+  <text x="198" y="72" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="700" font-size="32" fill="#FAFAF7" letter-spacing="2">MOVE TO</text>
+  <text x="198" y="106" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="700" font-size="32" fill="#FAFAF7" letter-spacing="2">DIGITAL</text>
 </svg>
