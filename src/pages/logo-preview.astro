@@ -8,7 +8,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <!-- GAPPED M — MOTION ITERATIONS -->
     <div class="mb-20 border-b-2 border-primary/20 pb-16">
       <h2 class="font-[family-name:var(--font-family-heading)] text-xl font-semibold text-primary mb-2 uppercase tracking-widest text-sm">Gapped M — Motion Iterations</h2>
-      <p class="text-text-muted mb-10 max-w-xl">Six variations exploring motion treatment for the displaced segment. Addressing the sharp/pointed top geometry from the original.</p>
+      <p class="text-text-muted mb-10 max-w-xl">Seven variations exploring motion treatment for the displaced segment. Addressing the sharp/pointed top geometry from the original.</p>
 
       <!-- Variation A: Thick Rounded Strokes -->
       <div class="mb-14">
@@ -266,6 +266,55 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                     fill="#D4A574" fill-rule="evenodd" />
               <text x="190" y="72" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="700" font-size="32" fill="#2D3748" letter-spacing="2">MOVE TO</text>
               <text x="190" y="106" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="700" font-size="32" fill="#2D3748" letter-spacing="2">DIGITAL</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Variation G: Flat-Topped + Proportioned D Letterform -->
+      <div class="mb-14">
+        <h3 class="font-[family-name:var(--font-family-heading)] text-sm font-semibold text-secondary mb-1">Variation G — Flat-Topped + "M to D" (Balanced Weight)</h3>
+        <p class="text-text-muted text-sm mb-6">Same as F but the D's bow is thicker (~22px) to match the spine weight. Smaller counter, wider overall D — reads as a proper bold letterform.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div class="bg-white rounded-2xl border border-border p-12 flex items-center justify-center">
+            <svg viewBox="0 0 182 120" xmlns="http://www.w3.org/2000/svg" class="w-32 h-32">
+              <defs>
+                <clipPath id="m-clip-g">
+                  <rect x="0" y="5" width="182" height="115" />
+                </clipPath>
+              </defs>
+              <!-- Main M body — flat-topped -->
+              <path d="M 15 115 L 15 -15 L 65 58 L 115 -15 L 115 44"
+                    stroke="#C2714F" stroke-width="24" fill="none"
+                    stroke-linejoin="miter" stroke-linecap="butt"
+                    clip-path="url(#m-clip-g)" />
+              <!-- Ghost trail — rectangular M leg shape -->
+              <rect x="103" y="44" width="24" height="71" fill="#D4A574" opacity="0.15"
+                    transform="rotate(0.5, 115, 80)" />
+              <!-- D letterform — balanced weight: spine 24px, bow ~22px, smaller counter -->
+              <path d="M 109,53 L 133,53 C 176,53 176,115 133,115 L 109,115 Z
+                       M 133,68 C 150,68 150,100 133,100 Z"
+                    fill="#D4A574" fill-rule="evenodd" />
+            </svg>
+          </div>
+          <div class="bg-white rounded-2xl border border-border p-12 flex items-center justify-center">
+            <svg viewBox="0 0 480 120" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-[410px]">
+              <defs>
+                <clipPath id="m-clip-g-wm">
+                  <rect x="0" y="5" width="182" height="115" />
+                </clipPath>
+              </defs>
+              <path d="M 15 115 L 15 -15 L 65 58 L 115 -15 L 115 44"
+                    stroke="#C2714F" stroke-width="24" fill="none"
+                    stroke-linejoin="miter" stroke-linecap="butt"
+                    clip-path="url(#m-clip-g-wm)" />
+              <rect x="103" y="44" width="24" height="71" fill="#D4A574" opacity="0.15"
+                    transform="rotate(0.5, 115, 80)" />
+              <path d="M 109,53 L 133,53 C 176,53 176,115 133,115 L 109,115 Z
+                       M 133,68 C 150,68 150,100 133,100 Z"
+                    fill="#D4A574" fill-rule="evenodd" />
+              <text x="198" y="72" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="700" font-size="32" fill="#2D3748" letter-spacing="2">MOVE TO</text>
+              <text x="198" y="106" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="700" font-size="32" fill="#2D3748" letter-spacing="2">DIGITAL</text>
             </svg>
           </div>
         </div>
