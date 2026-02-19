@@ -1,0 +1,102 @@
+---
+// Interactive architecture diagram: Gallagher CC -> Bridge -> Telstra Messaging API
+// Inline SVG with CSS hover transitions, viewBox-based responsive scaling
+---
+
+<div class="architecture-diagram w-full overflow-x-auto">
+  <svg
+    role="img"
+    aria-label="Architecture diagram showing event flow from Gallagher Command Centre through the bridge middleware to Telstra Messaging API"
+    viewBox="0 0 820 420"
+    xmlns="http://www.w3.org/2000/svg"
+    class="w-full h-auto"
+    style="min-width: 320px; max-width: 820px; margin: 0 auto; display: block;"
+  >
+    <title>Architecture diagram showing event flow from Gallagher Command Centre through the bridge middleware to Telstra Messaging API</title>
+    <defs>
+      <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#6B6560" />
+      </marker>
+      <marker id="arrowhead-down" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#6B6560" />
+      </marker>
+    </defs>
+
+    <!-- Gallagher Command Centre box -->
+    <g class="diagram-box diagram-box--gallagher">
+      <rect x="20" y="80" width="190" height="100" rx="8" ry="8" fill="#2D3748" stroke="#2D3748" stroke-width="1.5" />
+      <text x="115" y="118" text-anchor="middle" fill="#FFFFFF" font-family="'DM Sans', system-ui, sans-serif" font-size="13" font-weight="600">Gallagher</text>
+      <text x="115" y="138" text-anchor="middle" fill="#FFFFFF" font-family="'DM Sans', system-ui, sans-serif" font-size="13" font-weight="600">Command Centre</text>
+      <line x1="60" y1="152" x2="170" y2="152" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="0.75" />
+      <text x="115" y="170" text-anchor="middle" fill="#FFFFFF" font-family="'DM Sans', system-ui, sans-serif" font-size="10" fill-opacity="0.7">Security Event Source</text>
+    </g>
+
+    <!-- Arrow: Gallagher -> Bridge -->
+    <line x1="210" y1="120" x2="290" y2="120" stroke="#6B6560" stroke-width="1.5" marker-end="url(#arrowhead)" />
+    <text x="250" y="108" text-anchor="middle" fill="#6B6560" font-family="'DM Sans', system-ui, sans-serif" font-size="9" font-weight="500">HTTPS / mTLS</text>
+    <text x="250" y="140" text-anchor="middle" fill="#6B6560" font-family="'DM Sans', system-ui, sans-serif" font-size="9" font-weight="500">Event Polling</text>
+
+    <!-- Bridge / Event Processor box (centre) -->
+    <g class="diagram-box diagram-box--bridge">
+      <rect x="295" y="50" width="230" height="160" rx="8" ry="8" fill="#FFFFFF" stroke="#C2714F" stroke-width="2" />
+      <text x="410" y="80" text-anchor="middle" fill="#C2714F" font-family="'DM Sans', system-ui, sans-serif" font-size="14" font-weight="700">Bridge</text>
+      <text x="410" y="97" text-anchor="middle" fill="#6B6560" font-family="'DM Sans', system-ui, sans-serif" font-size="10">Event Processor</text>
+      <line x1="320" y1="108" x2="500" y2="108" stroke="#E5E0DA" stroke-width="0.75" />
+      <!-- Feature list -->
+      <circle cx="330" cy="128" r="2.5" fill="#C2714F" />
+      <text x="340" y="132" fill="#2D2A26" font-family="'DM Sans', system-ui, sans-serif" font-size="10">Event Processing</text>
+      <circle cx="330" cy="148" r="2.5" fill="#C2714F" />
+      <text x="340" y="152" fill="#2D2A26" font-family="'DM Sans', system-ui, sans-serif" font-size="10">Deduplication</text>
+      <circle cx="330" cy="168" r="2.5" fill="#C2714F" />
+      <text x="340" y="172" fill="#2D2A26" font-family="'DM Sans', system-ui, sans-serif" font-size="10">Filtering Rules</text>
+      <circle cx="330" cy="188" r="2.5" fill="#C2714F" />
+      <text x="340" y="192" fill="#2D2A26" font-family="'DM Sans', system-ui, sans-serif" font-size="10">Audit Logging</text>
+    </g>
+
+    <!-- Arrow: Bridge -> Telstra -->
+    <line x1="525" y1="120" x2="605" y2="120" stroke="#6B6560" stroke-width="1.5" marker-end="url(#arrowhead)" />
+    <text x="565" y="108" text-anchor="middle" fill="#6B6560" font-family="'DM Sans', system-ui, sans-serif" font-size="9" font-weight="500">OAuth2 / REST</text>
+    <text x="565" y="140" text-anchor="middle" fill="#6B6560" font-family="'DM Sans', system-ui, sans-serif" font-size="9" font-weight="500">SMS Delivery</text>
+
+    <!-- Telstra Messaging API box -->
+    <g class="diagram-box diagram-box--telstra">
+      <rect x="610" y="80" width="190" height="100" rx="8" ry="8" fill="#2D3748" stroke="#2D3748" stroke-width="1.5" />
+      <text x="705" y="118" text-anchor="middle" fill="#FFFFFF" font-family="'DM Sans', system-ui, sans-serif" font-size="13" font-weight="600">Telstra</text>
+      <text x="705" y="138" text-anchor="middle" fill="#FFFFFF" font-family="'DM Sans', system-ui, sans-serif" font-size="13" font-weight="600">Messaging API v3</text>
+      <line x1="650" y1="152" x2="760" y2="152" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="0.75" />
+      <text x="705" y="170" text-anchor="middle" fill="#FFFFFF" font-family="'DM Sans', system-ui, sans-serif" font-size="10" fill-opacity="0.7">SMS Delivery</text>
+    </g>
+
+    <!-- Arrow: Bridge -> Operator Dashboard (vertical) -->
+    <line x1="410" y1="210" x2="410" y2="280" stroke="#6B6560" stroke-width="1.5" marker-end="url(#arrowhead-down)" />
+
+    <!-- Operator Dashboard box -->
+    <g class="diagram-box diagram-box--dashboard">
+      <rect x="310" y="285" width="200" height="80" rx="8" ry="8" fill="#FFFFFF" stroke="#E5E0DA" stroke-width="1.5" />
+      <text x="410" y="318" text-anchor="middle" fill="#2D2A26" font-family="'DM Sans', system-ui, sans-serif" font-size="13" font-weight="600">Operator Dashboard</text>
+      <text x="410" y="340" text-anchor="middle" fill="#6B6560" font-family="'DM Sans', system-ui, sans-serif" font-size="10">Monitoring &amp; Configuration</text>
+      <text x="410" y="356" text-anchor="middle" fill="#6B6560" font-family="'DM Sans', system-ui, sans-serif" font-size="10">Certificate Management</text>
+    </g>
+  </svg>
+</div>
+
+<style>
+  .diagram-box {
+    transition: filter 0.25s ease, transform 0.25s ease;
+    transform-origin: center;
+  }
+
+  .diagram-box:hover {
+    filter: drop-shadow(0 4px 12px rgba(194, 113, 79, 0.25));
+    transform: scale(1.02);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .diagram-box {
+      transition: none;
+    }
+    .diagram-box:hover {
+      transform: none;
+    }
+  }
+</style>

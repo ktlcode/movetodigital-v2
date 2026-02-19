@@ -1,0 +1,141 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ScrollReveal from '../components/ScrollReveal.astro';
+import CaseStudyCard from '../components/CaseStudyCard.astro';
+import ArchitectureDiagram from '../components/ArchitectureDiagram.astro';
+import ContactCTA from '../components/ContactCTA.astro';
+---
+<BaseLayout
+  title="Case Studies — Move to Digital"
+  description="Selected architecture and delivery engagements. Event-driven integration, security middleware, and structured automation."
+  canonicalPath="/case-studies"
+>
+  <!-- Page header -->
+  <section class="py-16 md:py-20">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <ScrollReveal>
+        <h1 class="font-[family-name:var(--font-family-heading)] text-4xl md:text-5xl font-normal text-text mb-4">
+          Case Studies
+        </h1>
+        <p class="text-text-muted text-lg">
+          Selected architecture and delivery engagements.
+        </p>
+      </ScrollReveal>
+    </div>
+  </section>
+
+  <!-- Case Study A: Security Events -> SMS Notifications -->
+  <section class="border-b border-border">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <ScrollReveal>
+        <CaseStudyCard
+          title="Security Events &rarr; SMS Notifications"
+          engagement="Independent architecture + build engagement"
+        >
+          <p class="text-text-muted text-sm mb-6">
+            Gallagher Command Centre &harr; Telstra Messaging API
+          </p>
+
+          <!-- THE PROBLEM -->
+          <div>
+            <h3 class="text-xs uppercase tracking-widest text-text-muted font-semibold mb-3">The Problem</h3>
+            <p class="text-text leading-relaxed text-base md:text-lg">
+              The client's physical security platform (Gallagher Command Centre) generates critical events &mdash; door forced, access denied, alarm triggered &mdash; but has no native SMS notification capability. Operators needed real-time alerts on mobile, with filtering to prevent alert fatigue.
+            </p>
+          </div>
+
+          <!-- THE APPROACH -->
+          <div>
+            <h3 class="text-xs uppercase tracking-widest text-text-muted font-semibold mb-3">The Approach</h3>
+            <p class="text-text leading-relaxed text-base md:text-lg">
+              Designed and built an event-driven middleware bridge. The system polls Gallagher's REST API over mutual TLS, processes and deduplicates events through a rules engine, composes human-readable messages, and delivers via Telstra's Messaging API v3.
+            </p>
+          </div>
+
+          <!-- ARCHITECTURE -->
+          <div>
+            <h3 class="text-xs uppercase tracking-widest text-text-muted font-semibold mb-3">Architecture</h3>
+            <ArchitectureDiagram />
+          </div>
+
+          <!-- SECURITY -->
+          <div>
+            <h3 class="text-xs uppercase tracking-widest text-text-muted font-semibold mb-3">Security</h3>
+            <p class="text-text leading-relaxed text-base md:text-lg">
+              All communication uses TLS 1.2+. Gallagher API access is authenticated via mutual TLS client certificates. Telstra API uses OAuth2 bearer tokens with automatic refresh. API keys are hashed with PBKDF2 and stored with AES-256 encryption. The system handles minimal personal data &mdash; event metadata only, no PII in transit.
+            </p>
+          </div>
+
+          <!-- OUTCOMES -->
+          <div>
+            <h3 class="text-xs uppercase tracking-widest text-text-muted font-semibold mb-3">Outcomes</h3>
+            <p class="text-text leading-relaxed text-base md:text-lg">
+              Delivered working middleware with an operator dashboard, certificate management, and comprehensive audit logging. Zero-touch deployment capability for non-technical operators. Deployment pending customer rollout.
+            </p>
+          </div>
+
+          <!-- EXTENSIBILITY -->
+          <div>
+            <h3 class="text-xs uppercase tracking-widest text-text-muted font-semibold mb-3">Extensibility</h3>
+            <p class="text-text leading-relaxed text-base md:text-lg">
+              Architecture supports additional notification channels (email, Teams webhooks), configurable filtering rules, and multi-tenant deployment. Rate limiting and message queuing are built in.
+            </p>
+          </div>
+
+          <!-- Engagement label -->
+          <p class="text-text-muted text-sm mt-6 pt-6 border-t border-border">
+            Delivered as an independent architecture + build engagement.
+          </p>
+        </CaseStudyCard>
+      </ScrollReveal>
+    </div>
+  </section>
+
+  <!-- Case Study B: Structured Intake Automation -->
+  <section class="bg-bg-alt">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <ScrollReveal>
+        <CaseStudyCard
+          title="Structured Intake Automation"
+          engagement="Product development &mdash; own IP"
+        >
+          <p class="text-text-muted text-sm mb-6">
+            PDF &rarr; Digital Workflow Pipeline
+          </p>
+
+          <!-- THE PROBLEM -->
+          <div>
+            <h3 class="text-xs uppercase tracking-widest text-text-muted font-semibold mb-3">The Problem</h3>
+            <p class="text-text leading-relaxed text-base md:text-lg">
+              Clinicians were spending significant time manually transcribing standardised assessment forms from paper and PDF into digital records. The process was error-prone and created workflow bottlenecks.
+            </p>
+          </div>
+
+          <!-- THE APPROACH -->
+          <div>
+            <h3 class="text-xs uppercase tracking-widest text-text-muted font-semibold mb-3">The Approach</h3>
+            <p class="text-text leading-relaxed text-base md:text-lg">
+              Built a three-stage pipeline: PDF analysis extracts structured data into a canonical schema, which then generates interactive digital forms with real-time scoring and validation. The canonical model decouples the source format from the rendering engine, enabling rapid onboarding of new assessment instruments.
+            </p>
+          </div>
+
+          <!-- OUTCOMES -->
+          <div>
+            <h3 class="text-xs uppercase tracking-widest text-text-muted font-semibold mb-3">Outcomes</h3>
+            <p class="text-text leading-relaxed text-base md:text-lg">
+              Platform supports multiple assessment types with automated scoring. Clinician-facing interface designed with neurodivergent-first UX principles. Active development &mdash; own IP.
+            </p>
+          </div>
+
+          <!-- Engagement label -->
+          <p class="text-text-muted text-sm mt-6 pt-6 border-t border-border">
+            Product development &mdash; own IP.
+          </p>
+        </CaseStudyCard>
+      </ScrollReveal>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <ContactCTA />
+</BaseLayout>
