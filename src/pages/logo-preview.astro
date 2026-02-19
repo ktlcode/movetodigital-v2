@@ -48,10 +48,39 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <p class="text-text-muted text-sm mb-6">24px strokes clipped flat at the top. Bold, chunky Image 1 feel. Displaced segment +8px right, tilted 4°.</p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div class="bg-white rounded-2xl border border-border p-12 flex items-center justify-center">
-            <!-- VARIATION B: ICON -->
+            <svg viewBox="0 0 145 120" xmlns="http://www.w3.org/2000/svg" class="w-32 h-32">
+              <defs>
+                <clipPath id="m-clip-b">
+                  <!-- Clips the miter points flat at y=5 -->
+                  <rect x="0" y="5" width="145" height="115" />
+                </clipPath>
+              </defs>
+              <!-- Main M body — paths extended above clip boundary so miter points get cut flat -->
+              <path d="M 15 115 L 15 -15 L 65 58 L 115 -15 L 115 44"
+                    stroke="#C2714F" stroke-width="24" fill="none"
+                    stroke-linejoin="miter" stroke-linecap="butt"
+                    clip-path="url(#m-clip-b)" />
+              <!-- Displaced segment — pushed +8px right, tilted 4° -->
+              <rect x="115" y="62" width="24" height="53" fill="#D4A574"
+                    transform="rotate(4, 127, 88)" />
+            </svg>
           </div>
           <div class="bg-white rounded-2xl border border-border p-12 flex items-center justify-center">
-            <!-- VARIATION B: WORDMARK -->
+            <svg viewBox="0 0 440 120" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-[380px]">
+              <defs>
+                <clipPath id="m-clip-b-wm">
+                  <rect x="0" y="5" width="145" height="115" />
+                </clipPath>
+              </defs>
+              <path d="M 15 115 L 15 -15 L 65 58 L 115 -15 L 115 44"
+                    stroke="#C2714F" stroke-width="24" fill="none"
+                    stroke-linejoin="miter" stroke-linecap="butt"
+                    clip-path="url(#m-clip-b-wm)" />
+              <rect x="115" y="62" width="24" height="53" fill="#D4A574"
+                    transform="rotate(4, 127, 88)" />
+              <text x="165" y="72" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="700" font-size="32" fill="#2D3748" letter-spacing="2">MOVE TO</text>
+              <text x="165" y="106" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="700" font-size="32" fill="#2D3748" letter-spacing="2">DIGITAL</text>
+            </svg>
           </div>
         </div>
       </div>
