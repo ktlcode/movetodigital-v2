@@ -14,7 +14,7 @@
   --color-text-muted: #6B6560;
   --color-border: #E5E0DA;
 
-  --font-family-heading: 'Instrument Serif', Georgia, serif;
+  --font-family-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
   --font-family-body: 'DM Sans', system-ui, sans-serif;
   --font-family-mono: 'JetBrains Mono', ui-monospace, monospace;
 }
