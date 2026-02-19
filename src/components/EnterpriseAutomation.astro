@@ -1,0 +1,94 @@
+---
+import ScrollReveal from './ScrollReveal.astro';
+
+const engagements = [
+  {
+    title: 'Event-driven integration',
+    body: 'Connecting platforms (security systems, line-of-business apps, cloud services) through secure middleware with real-time event processing and alerting.',
+  },
+  {
+    title: 'Workflow automation',
+    body: 'Replacing manual processes with structured digital workflows. Automated scoring, routing, notifications, and audit trails.',
+  },
+  {
+    title: 'AI workflow integration',
+    body: 'Embedding AI capabilities (document intelligence, Copilot-style assistants, classification) into enterprise workflows with appropriate governance and human-in-loop controls.',
+  },
+  {
+    title: 'Secure notification pipelines',
+    body: 'mTLS, OAuth2, bearer token management, and least-privilege patterns for cross-platform messaging and alerting.',
+  },
+];
+
+const governance = [
+  {
+    title: 'Data boundaries',
+    body: 'Clear separation of what is processed, what is stored, and what leaves the environment.',
+  },
+  {
+    title: 'Identity and access',
+    body: 'Mutual TLS, OAuth2, least-privilege service accounts, certificate lifecycle management.',
+  },
+  {
+    title: 'Audit logging',
+    body: 'Comprehensive event trails for every automated action and integration touchpoint.',
+  },
+  {
+    title: 'Human-in-loop controls',
+    body: 'AI-assisted outputs are reviewed and validated before operational use. Automation assists decisions; it does not make them unilaterally.',
+  },
+];
+---
+
+<section class="py-16 md:py-24 bg-bg">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <ScrollReveal>
+      <div class="mb-12">
+        <h2 class="font-[family-name:var(--font-family-heading)] text-3xl font-semibold text-secondary mb-3">
+          Enterprise Automation
+        </h2>
+        <p class="text-text-muted max-w-3xl">
+          I architect and build automation solutions that connect enterprise systems securely, embed AI where it adds genuine value, and pass security review in regulated environments.
+        </p>
+      </div>
+    </ScrollReveal>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
+      {/* Typical Engagements */}
+      <ScrollReveal>
+        <div>
+          <h3 class="font-[family-name:var(--font-family-heading)] text-lg font-semibold text-secondary mb-6 flex items-center gap-2">
+            <span class="inline-block w-8 h-[2px] bg-primary"></span>
+            Typical Engagements
+          </h3>
+          <div class="space-y-5">
+            {engagements.map((item) => (
+              <div class="pl-4 border-l-2 border-border hover:border-primary transition-colors duration-200">
+                <p class="text-text font-medium mb-1">{item.title}</p>
+                <p class="text-text-muted text-sm leading-relaxed">{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </ScrollReveal>
+
+      {/* Governance by Design */}
+      <ScrollReveal delay={100}>
+        <div>
+          <h3 class="font-[family-name:var(--font-family-heading)] text-lg font-semibold text-secondary mb-6 flex items-center gap-2">
+            <span class="inline-block w-8 h-[2px] bg-accent"></span>
+            Governance by Design
+          </h3>
+          <div class="space-y-5">
+            {governance.map((item) => (
+              <div class="pl-4 border-l-2 border-border hover:border-accent transition-colors duration-200">
+                <p class="text-text font-medium mb-1">{item.title}</p>
+                <p class="text-text-muted text-sm leading-relaxed">{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </ScrollReveal>
+    </div>
+  </div>
+</section>

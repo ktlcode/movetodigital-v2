@@ -1,0 +1,453 @@
+================================================================================
+MOVE TO DIGITAL — FULL WEBSITE CONTENT
+================================================================================
+Domain: movetodigital.au
+Type: Static portfolio + support site (Astro framework, Cloudflare Pages)
+Last updated: February 2026
+================================================================================
+
+This document contains the complete text content of the Move to Digital website,
+structured page-by-page. Use this to review copy, tone, consistency, and
+messaging across the entire site.
+
+Navigation appears on every page:
+  Links: Home | Case Studies | About | Support | Contact (mailto:contact@movetodigital.au)
+  Logo: "Move to Digital" with SVG icon mark
+
+Footer appears on every page:
+  Brand: "Move to Digital — Automation & Integration Architecture"
+  Quick Links: Home, Case Studies, About, Support
+  Legal: Privacy, Security
+  Contact: contact@movetodigital.au
+  Copyright: "© 2026 Move to Digital. ABN Registered."
+
+
+################################################################################
+PAGE 1: HOME (/)
+################################################################################
+Meta title: "Move to Digital — Automation & Integration Architecture"
+Meta description: "Secure automation and integration architecture for regulated
+environments. Independent practice based in Brisbane, Australia."
+
+--------------------------------------------------------------------------------
+SECTION: Hero
+--------------------------------------------------------------------------------
+[Tagline]
+INDEPENDENT PRACTICE — BRISBANE, AUSTRALIA
+
+[H1] Move to Digital
+
+[Primary subtitle]
+Secure automation & integration architecture for regulated environments.
+
+[Secondary subtitle]
+Event-driven integration, security-first design, and AI-enabled delivery for
+government and enterprise.
+
+[Call-to-action buttons]
+- "Get in Touch" → mailto:contact@movetodigital.au
+- "View Case Studies" → /case-studies
+
+--------------------------------------------------------------------------------
+SECTION: Proof Pillars (3 columns)
+--------------------------------------------------------------------------------
+
+[Pillar 1]
+[H3] Integration Architecture
+Event-driven APIs, secure middleware, and system integration for platforms that
+need to talk to each other reliably. REST, webhooks, message queues — built for
+auditability and scale.
+
+[Pillar 2]
+[H3] Security-by-Design
+OAuth2 flows, mutual TLS, bearer token management, and least-privilege access
+patterns. Security is the architecture, not an afterthought.
+
+[Pillar 3]
+[H3] Delivery in Regulated Environments
+Proven delivery in government, utilities, and enterprise environments.
+Compliance-aware architecture that meets the bar without over-engineering.
+
+--------------------------------------------------------------------------------
+SECTION: Selected Work (2 cards)
+--------------------------------------------------------------------------------
+[H2] Selected Work
+[Subtitle] Architecture and delivery engagements across integration, security,
+and automation.
+
+[Card 1]
+[H3] Security Events → SMS Notifications
+Event-driven middleware connecting Gallagher Command Centre to Telstra's
+messaging platform. mTLS, OAuth2, real-time alerting.
+→ "Read more" links to /case-studies
+
+[Card 2]
+[H3] Structured Intake Automation
+Transforming standardised PDF assessment instruments into interactive digital
+workflows with real-time scoring.
+→ "Read more" links to /case-studies
+
+--------------------------------------------------------------------------------
+SECTION: Apps & Support (2 cards)
+--------------------------------------------------------------------------------
+[H2] Apps & Support
+[Subtitle] Tools I've built. If you're using one and need help, start here.
+
+[Card 1]
+ClientForms.app
+Clinician-facing assessment workflow tool
+Status: In Production
+→ https://clientforms.app
+
+[Card 2]
+WaitingForAMate.com
+Community referral app
+Status: In Production
+→ https://waitingforamate.com
+
+[Link] "Visit Support Hub →" links to /support
+
+--------------------------------------------------------------------------------
+SECTION: Contact CTA
+--------------------------------------------------------------------------------
+[H2] Have a project? Let's talk.
+[Subtitle] I'm available for architecture and delivery engagements.
+[Button] contact@movetodigital.au
+
+
+################################################################################
+PAGE 2: CASE STUDIES (/case-studies)
+################################################################################
+Meta title: "Case Studies — Move to Digital"
+Meta description: "Selected architecture and delivery engagements."
+
+--------------------------------------------------------------------------------
+SECTION: Page Header
+--------------------------------------------------------------------------------
+[H1] Case Studies
+[Subtitle] Selected architecture and delivery engagements.
+
+--------------------------------------------------------------------------------
+CASE STUDY A: Security Events → SMS Notifications
+--------------------------------------------------------------------------------
+[H2] Security Events → SMS Notifications
+[Label] Independent architecture + build engagement
+[Subtitle] Gallagher Command Centre ⇄ Telstra Messaging API
+
+[H3] The Problem
+The client's physical security platform (Gallagher Command Centre) generates
+critical events — door forced, access denied, alarm triggered — but has no
+native SMS notification capability. Operators needed real-time alerts on mobile,
+with filtering to prevent alert fatigue.
+
+[H3] The Approach
+Designed and built an event-driven middleware bridge. The system polls
+Gallagher's REST API over mutual TLS, processes and deduplicates events through
+a rules engine, composes human-readable messages, and delivers via Telstra's
+Messaging API v3.
+
+[Architecture Diagram — described textually]
+Flow: Gallagher Command Centre (Security Event Source)
+  → HTTPS / mTLS Event Polling →
+  Bridge (Event Processor)
+    • Event Processing
+    • Deduplication
+    • Filtering Rules
+    • Audit Logging
+  → OAuth2 / REST SMS Delivery →
+  Telstra Messaging API v3 (SMS Delivery)
+  Bridge also connects to:
+  Operator Dashboard (Monitoring & Configuration, Certificate Management)
+
+[H3] Security
+All communication uses TLS 1.2+. Gallagher API access is authenticated via
+mutual TLS client certificates. Telstra API uses OAuth2 bearer tokens with
+automatic refresh. API keys are hashed with PBKDF2 and stored with AES-256
+encryption. The system handles minimal personal data — event metadata only, no
+PII in transit.
+
+[H3] Outcomes
+Delivered working middleware with an operator dashboard, certificate management,
+and comprehensive audit logging. Zero-touch deployment capability for
+non-technical operators. Deployment pending customer rollout.
+
+[H3] Extensibility
+Architecture supports additional notification channels (email, Teams webhooks),
+configurable filtering rules, and multi-tenant deployment. Rate limiting and
+message queuing are built in.
+
+[Footer label] Delivered as an independent architecture + build engagement.
+
+--------------------------------------------------------------------------------
+CASE STUDY B: Structured Intake Automation
+--------------------------------------------------------------------------------
+[H2] Structured Intake Automation
+[Label] Product development — own IP
+[Subtitle] PDF → Digital Workflow Pipeline
+
+[H3] The Problem
+Clinicians were spending significant time manually transcribing standardised
+assessment forms from paper and PDF into digital records. The process was
+error-prone and created workflow bottlenecks.
+
+[H3] The Approach
+Built a three-stage pipeline: PDF analysis extracts structured data into a
+canonical schema, which then generates interactive digital forms with real-time
+scoring and validation. The canonical model decouples the source format from the
+rendering engine, enabling rapid onboarding of new assessment instruments.
+
+[H3] Outcomes
+Platform supports multiple assessment types with automated scoring.
+Clinician-facing interface designed with neurodivergent-first UX principles.
+Active development — own IP.
+
+[Footer label] Product development — own IP.
+
+--------------------------------------------------------------------------------
+SECTION: Contact CTA
+--------------------------------------------------------------------------------
+[H2] Have a project? Let's talk.
+[Subtitle] I'm available for architecture and delivery engagements.
+[Button] contact@movetodigital.au
+
+
+################################################################################
+PAGE 3: ABOUT (/about)
+################################################################################
+Meta title: "About — Move to Digital"
+Meta description: "Independent automation and integration architecture practice
+based in Brisbane, Australia."
+
+--------------------------------------------------------------------------------
+SECTION: Page Header
+--------------------------------------------------------------------------------
+[H1] About
+
+--------------------------------------------------------------------------------
+SECTION: Professional Bio
+--------------------------------------------------------------------------------
+I'm an automation and integration architect based in Brisbane, Australia, with
+over 20 years of experience across government, utilities, and enterprise
+environments.
+
+My work focuses on the space between systems — building secure, event-driven
+integrations that connect platforms reliably and pass security review. I've
+delivered across the M365 ecosystem, API development, information governance,
+and cloud infrastructure.
+
+I now operate as an independent practice — Move to Digital — taking on
+architecture and delivery engagements, and building my own software products.
+
+--------------------------------------------------------------------------------
+SECTION: How I Work (4-step process)
+--------------------------------------------------------------------------------
+[H2] How I Work
+
+Step 1: Discovery
+Understanding the problem, the constraints, and the people involved.
+
+Step 2: Architecture
+Designing the solution with security, maintainability, and handover in mind.
+
+Step 3: Build
+Iterative delivery with regular checkpoints. No surprises.
+
+Step 4: Handover
+Documentation, runbooks, and knowledge transfer. You own it completely.
+
+--------------------------------------------------------------------------------
+SECTION: Principles
+--------------------------------------------------------------------------------
+[H2] Principles
+
+- Every engagement includes documentation and runbooks. If I build it, you can
+  maintain it.
+- Security review is part of the architecture, not a gate at the end.
+- AI-assisted development where it adds genuine value, not as a talking point.
+
+--------------------------------------------------------------------------------
+SECTION: Contact Links
+--------------------------------------------------------------------------------
+LinkedIn →
+contact@movetodigital.au →
+
+--------------------------------------------------------------------------------
+SECTION: Contact CTA
+--------------------------------------------------------------------------------
+[H2] Have a project? Let's talk.
+[Subtitle] I'm available for architecture and delivery engagements.
+[Button] contact@movetodigital.au
+
+
+################################################################################
+PAGE 4: SUPPORT (/support)
+################################################################################
+Meta title: "Support — Move to Digital"
+Meta description: "Support hub for Move to Digital applications. Get help with
+ClientForms.app and WaitingForAMate.com."
+
+--------------------------------------------------------------------------------
+SECTION: Page Header
+--------------------------------------------------------------------------------
+[H1] Apps & Support
+[Subtitle] If you're using one of my apps and need help, you're in the right
+place.
+
+--------------------------------------------------------------------------------
+SECTION: App Cards (2 cards)
+--------------------------------------------------------------------------------
+
+[Card 1]
+ClientForms.app
+Clinician-facing assessment workflow tool. Structured digital forms with
+real-time scoring for clinical practice.
+Status: In Production
+→ https://clientforms.app
+
+[Card 2]
+WaitingForAMate.com
+Community referral app. Share and discover services through trusted connections.
+Status: In Production
+→ https://waitingforamate.com
+
+--------------------------------------------------------------------------------
+SECTION: Support Policy (3 columns)
+--------------------------------------------------------------------------------
+[H2] Support Policy
+
+[Column 1: Response Times]
+Best-effort response within 2 business days. Critical security issues are
+prioritised.
+
+[Column 2: Security Reporting]
+If you've found a security vulnerability, please report it to
+security@movetodigital.au. See our Security page for full disclosure guidelines.
+
+[Column 3: General Enquiries]
+For all other support requests: contact@movetodigital.au
+
+--------------------------------------------------------------------------------
+SECTION: System Status
+--------------------------------------------------------------------------------
+[H2] System Status
+● All systems operational
+Status is updated manually. For real-time issues, contact support.
+
+--------------------------------------------------------------------------------
+SECTION: Contact CTA
+--------------------------------------------------------------------------------
+[H2] Have a project? Let's talk.
+[Subtitle] I'm available for architecture and delivery engagements.
+[Button] contact@movetodigital.au
+
+
+################################################################################
+PAGE 5: PRIVACY (/privacy)
+################################################################################
+Meta title: "Privacy — Move to Digital"
+Meta description: "Privacy practices for Move to Digital and its applications."
+
+--------------------------------------------------------------------------------
+SECTION: Page Header
+--------------------------------------------------------------------------------
+[H1] Privacy
+Last updated: February 2026
+
+--------------------------------------------------------------------------------
+SECTION: This Website
+--------------------------------------------------------------------------------
+[H2] This Website
+
+This is a static portfolio and support website. It does not use cookies,
+tracking scripts, or analytics. No personal data is collected through browsing
+this site.
+
+If you contact me via email, I'll handle your information with the care you'd
+expect — used only to respond to your enquiry, not shared with third parties,
+and deleted when no longer needed.
+
+--------------------------------------------------------------------------------
+SECTION: Applications
+--------------------------------------------------------------------------------
+[H2] Applications
+
+My applications (ClientForms.app, WaitingForAMate.com) have their own privacy
+policies, which are available within each application. The privacy practices of
+those apps are separate from this website.
+
+--------------------------------------------------------------------------------
+SECTION: Contact
+--------------------------------------------------------------------------------
+[H2] Contact
+
+If you have questions about privacy practices, contact:
+contact@movetodigital.au
+
+
+################################################################################
+PAGE 6: SECURITY (/security)
+################################################################################
+Meta title: "Security — Move to Digital"
+Meta description: "Responsible disclosure policy for Move to Digital
+applications and services."
+
+--------------------------------------------------------------------------------
+SECTION: Page Header
+--------------------------------------------------------------------------------
+[H1] Security
+[Subtitle] Responsible Disclosure
+
+--------------------------------------------------------------------------------
+SECTION: Reporting a Vulnerability
+--------------------------------------------------------------------------------
+[H2] Reporting a Vulnerability
+
+I take security seriously. If you've found a vulnerability in any of my
+applications or services, I want to hear about it.
+
+Email: security@movetodigital.au
+
+Please include:
+  - Description of the vulnerability
+  - Steps to reproduce
+  - Affected application or service
+  - Your assessment of severity (if known)
+  - Any supporting evidence (screenshots, logs)
+
+--------------------------------------------------------------------------------
+SECTION: What to Expect
+--------------------------------------------------------------------------------
+[H2] What to Expect
+
+- Acknowledgement within 2 business days
+- I'll keep you updated on progress
+- I won't take legal action against good-faith security research
+
+--------------------------------------------------------------------------------
+SECTION: Scope
+--------------------------------------------------------------------------------
+[H2] Scope
+
+In scope:
+  - ClientForms.app
+  - WaitingForAMate.com
+  - movetodigital.au
+  - Associated APIs and infrastructure
+
+Out of scope:
+  - Social engineering or phishing attempts
+  - Denial of service attacks
+  - Issues in third-party services I don't control
+
+--------------------------------------------------------------------------------
+SECTION: Bug Bounty
+--------------------------------------------------------------------------------
+[H2] No Bug Bounty
+
+I don't currently operate a bug bounty programme. I do appreciate responsible
+disclosure and will credit reporters where appropriate (with your consent).
+
+
+================================================================================
+END OF WEBSITE CONTENT
+================================================================================
