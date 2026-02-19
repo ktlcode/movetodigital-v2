@@ -7,72 +7,71 @@ Take these prompts to Google Gemini Imagen. Each prompt is fully self-contained 
 ## 0. Brand Logo — Primary Wordmark + Icon
 
 ```
-Design a professional logo for "Move to Digital" — an independent automation and integration architecture practice based in Australia. The logo must communicate precision, structure, and technical authority.
+Design a professional logo for "Move to Digital" — an independent automation and integration architecture practice. The practice builds secure bridges between enterprise systems. The logo needs personality and warmth while remaining professional.
 
-CONCEPT DIRECTION — the logomark (icon):
-The logomark is a SOLID, FILLED, BLOCKY letter "M" constructed entirely from straight lines and sharp angles on a strict geometric grid. This is NOT a clever conceptual logo — it is a clean, confident, architectural letterform. Think of how a structural engineer would draw the letter M: precise, load-bearing, no decoration.
+CONCEPT — "The Stamped M":
+The logomark is a warm terracotta ROUNDED SQUARE (like a modern app icon shape with smooth corners) with the letter "M" CUT OUT of it in negative space — the M is white (the background showing through), and the surrounding shape is filled solid terracotta. Think of it as a rubber stamp or a wax seal: a warm, solid shape with a clean letter pressed into it.
 
-EXACT GEOMETRIC CONSTRUCTION of the "M":
-- The M is built from FIVE solid rectangular bars/strokes of equal width, arranged to form the letter
-- Two vertical bars on the far left and far right (the outer legs)
-- Two diagonal bars angling inward from the top of each outer leg, meeting at the centre bottom
-- The diagonals meet at a sharp V-point at approximately 40% of the total height from the bottom
-- ALL corners are sharp 90-degree or precise angled cuts — NO rounded corners, NO rounded terminals, NO circles, NO curves of any kind
-- The stroke width of each bar should be approximately 15-18% of the total letter width
-- The overall proportions should be slightly wider than tall (ratio approximately 1.15:1)
-- The letter should feel SOLID and HEAVY — like it's carved from stone or milled from metal
+This approach gives the logo personality because:
+- The filled shape creates a warm, confident presence (unlike an outline or bare letterform)
+- The negative-space cutout technique feels crafted and intentional — like a maker's mark
+- The rounded square container reads as modern and app-aware (your audience knows this shape)
+- It's inherently distinctive — most logos are positive-space marks, this is inverted
 
-WHAT THE "M" MUST NOT LOOK LIKE:
-- Must NOT have rounded ends, circular terminals, or dots at any point — this makes it look like human figures or body parts
-- Must NOT have curved strokes — curves make it look organic/human
-- Must NOT look like mountains, peaks, or a heartbeat monitor line
-- Must NOT look like two people, stick figures, legs, or any human form when viewed from any angle or orientation
-- Must NOT use thin or delicate strokes — it must feel substantial and architectural
-- Every edge must be a clean straight cut
+EXACT CONSTRUCTION:
+- The outer shape is a ROUNDED SQUARE (also called a squircle). Proportions: exactly square. Corner radius: approximately 22-25% of the width — smooth, continuous corners like an iOS app icon, NOT a basic rounded rectangle with circular arcs
+- The outer shape is filled SOLID with Primary Terracotta (#C2714F) — completely flat, no texture, no gradient
+- The "M" inside is cut out as NEGATIVE SPACE (white/transparent showing through)
+- The M letterform should be a clean, geometric sans-serif — similar to the "M" from Plus Jakarta Sans ExtraBold or Montserrat Black
+- The M should be optically centred within the square (slightly above mathematical centre)
+- The M should occupy approximately 50-55% of the square's width and 45-50% of its height
+- The M's strokes should be THICK and confident — this is a bold, heavy letterform
+- The M has sharp, straight edges — no serif details, no decorative features
+- Small, even spacing between the M's edges and the outer shape on all sides
 
-COLOUR APPLICATION on the logomark:
-- The entire M is filled in Primary Terracotta (#C2714F) as a single solid colour
-- No colour variations, no two-tone, no accent colours on the mark itself
-- The M should read as one unified, confident shape
+WHAT MAKES THIS FEEL DESIGNED (not AI-generated):
+- The corner radius of the squircle must be PERFECTLY SMOOTH — continuous curvature, not four circular arcs joined together. This is the difference between an Apple icon and a cheap imitation.
+- The M's proportions must feel custom — slightly wider than a standard font M, with the inner V not going too deep (approximately 35-40% of height). This makes it feel purpose-built, not typed.
+- The overall form should feel like a PHYSICAL OBJECT — something you could hold, press into clay, or stamp onto paper. Warm and tactile in impression.
 
 WORDMARK — the text "MOVE TO DIGITAL":
-- Appears below the logomark (stacked version) or to the right (horizontal version)
-- Use a bold geometric sans-serif font similar to Plus Jakarta Sans Bold or DM Sans Bold
+- Appears BELOW the logomark with comfortable spacing (gap equal to approximately 30% of the logomark height)
+- Font: a bold geometric sans-serif similar to Plus Jakarta Sans SemiBold
 - All uppercase: "MOVE TO DIGITAL" as a single line
 - Set in Deep Slate (#2D3748)
-- Letter-spacing: slightly expanded (+2-3% tracking) for a clean, airy feel
-- The wordmark should be noticeably lighter in visual weight than the logomark — it supports, not competes
+- Letter-spacing: expanded (+3% tracking)
+- The wordmark's total width should be approximately equal to or slightly wider than the logomark, creating a balanced stacked composition
+- "TO" can optionally be set in a lighter weight (Regular instead of SemiBold) to create subtle rhythm — only if it looks natural
 
-COLOUR PALETTE — use ONLY these three colours, no others:
-- Primary Terracotta: #C2714F (warm rust-brown) — the logomark only
+COLOUR PALETTE — strictly these three, nothing else:
+- Primary Terracotta: #C2714F (warm rust-brown) — fills the squircle shape only
 - Deep Slate: #2D3748 (dark blue-grey) — the wordmark text only
-- White: #FFFFFF — the background only
-- No honey, no gold, no accent colours. Two colours plus white. That's it.
+- White: #FFFFFF — the background and the M negative space
+- No other colours. No honey, no gold, no accents. Three colours total.
 
 VISUAL STYLE:
-- Flat, geometric, vector-style — as if constructed in Adobe Illustrator using only the rectangle tool and the rotate tool
-- Absolutely no 3D effects, no gradients, no shadows, no gloss, no glow, no texture, no grain
-- The logo must look like it could be cut from a single sheet of metal with a laser
-- Must work at small sizes (32px favicon — the M shape must still be recognisable) and large sizes (website header)
-- Must work on both pure white (#FFFFFF) and warm off-white (#FAFAF7) backgrounds
-- Must work as single-colour Deep Slate (#2D3748) for monochrome printing
+- Flat, vector-style, as if made in Adobe Illustrator or Figma
+- No 3D, no gradients, no shadows, no gloss, no glow, no texture, no grain, no bevels
+- Must work at 32px (the squircle shape + white M cutout must still read clearly as a favicon)
+- Must work at 400px+ (website header, social media)
+- Must work on white (#FFFFFF), warm off-white (#FAFAF7), and dark (#2D3748) backgrounds — for dark backgrounds, provide an alternate version where the squircle is Deep Slate and the M cutout is terracotta
+- Must work as monochrome (single colour Deep Slate on white)
 
-LAYOUT — produce the STACKED version only:
-- Logomark centred above the wordmark
-- Vertical arrangement, suitable for square spaces
-- Dimensions: 1200 x 1200 px, square, white background (#FFFFFF), PNG
-- Generous padding: at least 20% of width on each side
-- The logomark should occupy roughly the top 45% of the composition, wordmark in the lower portion
+DIMENSIONS AND DELIVERABLE:
+- 1200 x 1200 px, square, white background (#FFFFFF), PNG
+- Logomark centred in upper portion, wordmark centred below
+- Generous padding: at least 18% of width on each side
+- The logomark squircle should be approximately 400-450px wide within the 1200px canvas
 
 CRITICAL REQUIREMENTS:
-- The M must be IMMEDIATELY and UNAMBIGUOUSLY readable as the letter M by anyone, in any context, at any size, from any distance
-- There must be absolutely zero possibility of the shape being mistaken for human figures, body parts, mountains, or any other object
-- Every single edge and corner must be a clean, straight, sharp cut — zero curves
-- The logo must feel like it was designed by a Swiss typographer who values precision above cleverness
-- The overall impression: "solid, warm, architectural, precise" — like a building you'd trust to stand for decades
-- Reference the restraint of: IBM's 8-bar logo, Stripe's wordmark, Linear's logomark, Vercel's triangle — match that level of geometric discipline. Do NOT copy any of these designs.
+- The squircle must have PERFECTLY SMOOTH continuous-curvature corners (Apple-quality, not Android-quality)
+- The M must be immediately and unambiguously the letter M — a standard, bold, geometric sans-serif M with no cleverness, no hidden meanings, no double-reads
+- The M must NOT look like: mountains, people, legs, figures, arrows, or any object other than the letter M
+- The warmth and personality comes from the TECHNIQUE (negative space cutout in a warm-coloured shape) not from the letterform itself — the M is deliberately plain so the container does the work
+- The overall impression: "a craftsperson's mark" — warm, confident, modern, built to last
+- Think of: the quality of the Notion logo (clean N in a container), the warmth of a Letterpress stamp, the simplicity of a wax seal on an envelope
 
-NEVER INCLUDE: curves, rounded corners, rounded terminals, circles, dots, nodes, organic shapes, gradients, shadows, 3D effects, gloss, glow, texture, grain, decorative elements, swooshes, flourishes, illustrations, or any colours outside the three specified above (terracotta, slate, white).
+NEVER INCLUDE: gradients, shadows, 3D effects, gloss, glow, texture, grain, decorative elements, swooshes, organic shapes, illustrations, additional icons, patterns inside the squircle, borders or outlines around the squircle, or any colours outside the three specified.
 ```
 
 ---
