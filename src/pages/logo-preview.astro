@@ -12,29 +12,38 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <!-- Variation A: Thick Rounded Strokes -->
       <div class="mb-14">
-        <h3 class="font-[family-name:var(--font-family-heading)] text-sm font-semibold text-secondary mb-1">Variation A — Thick Rounded Strokes + Subtle Tilt</h3>
-        <p class="text-text-muted text-sm mb-6">22px strokes with round joins and caps. Soft dome tops, rounded valley. Displaced segment tilted 3°.</p>
+        <h3 class="font-[family-name:var(--font-family-heading)] text-sm font-semibold text-secondary mb-1">Variation A — Thick Rounded Strokes + Motion Trail</h3>
+        <p class="text-text-muted text-sm mb-6">22px strokes with round joins and caps. Soft dome tops, rounded valley. Subtle tilt with ghost trail.</p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div class="bg-white rounded-2xl border border-border p-12 flex items-center justify-center">
-            <svg viewBox="0 0 130 120" xmlns="http://www.w3.org/2000/svg" class="w-32 h-32">
+            <svg viewBox="0 0 135 120" xmlns="http://www.w3.org/2000/svg" class="w-32 h-32">
               <!-- Main M body — thick rounded strokes soften the tops and valley -->
               <path d="M 15 110 L 15 12 L 65 62 L 115 12 L 115 48"
                     stroke="#C2714F" stroke-width="22" fill="none"
                     stroke-linecap="round" stroke-linejoin="round" />
-              <!-- Displaced segment — tilted 3° around its centre -->
+              <!-- Ghost trail -->
+              <line x1="117" y1="50" x2="117" y2="110"
+                    stroke="#D4A574" stroke-width="22" stroke-linecap="round"
+                    opacity="0.2" transform="rotate(1, 117, 80)" />
+              <!-- Displaced segment — subtle 1.5° tilt -->
               <line x1="121" y1="66" x2="121" y2="110"
                     stroke="#D4A574" stroke-width="22" stroke-linecap="round"
-                    transform="rotate(3, 121, 88)" />
+                    transform="rotate(1.5, 121, 88)" />
             </svg>
           </div>
           <div class="bg-white rounded-2xl border border-border p-12 flex items-center justify-center">
-            <svg viewBox="0 0 420 120" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-[360px]">
+            <svg viewBox="0 0 425 120" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-[360px]">
               <path d="M 15 110 L 15 12 L 65 62 L 115 12 L 115 48"
                     stroke="#C2714F" stroke-width="22" fill="none"
                     stroke-linecap="round" stroke-linejoin="round" />
+              <!-- Ghost trail -->
+              <line x1="117" y1="50" x2="117" y2="110"
+                    stroke="#D4A574" stroke-width="22" stroke-linecap="round"
+                    opacity="0.2" transform="rotate(1, 117, 80)" />
+              <!-- Displaced segment — subtle 1.5° tilt -->
               <line x1="121" y1="66" x2="121" y2="110"
                     stroke="#D4A574" stroke-width="22" stroke-linecap="round"
-                    transform="rotate(3, 121, 88)" />
+                    transform="rotate(1.5, 121, 88)" />
               <text x="160" y="72" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="700" font-size="32" fill="#2D3748" letter-spacing="2">MOVE TO</text>
               <text x="160" y="106" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="700" font-size="32" fill="#2D3748" letter-spacing="2">DIGITAL</text>
             </svg>
@@ -146,10 +155,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                     clip-path="url(#m-clip-d)" />
               <!-- Ghost trail — connects displaced piece back to origin position -->
               <rect x="103" y="44" width="24" height="71" fill="#D4A574" opacity="0.2"
-                    transform="rotate(2, 115, 80)" />
-              <!-- Displaced segment — same position as Variation B -->
-              <rect x="115" y="62" width="24" height="53" fill="#D4A574"
-                    transform="rotate(4, 127, 88)" />
+                    transform="rotate(0.5, 115, 80)" />
+              <!-- Displaced segment — subtle tilt, closer to main body -->
+              <rect x="109" y="62" width="24" height="53" fill="#D4A574"
+                    transform="rotate(1.5, 121, 88)" />
             </svg>
           </div>
           <div class="bg-white rounded-2xl border border-border p-12 flex items-center justify-center">
@@ -164,9 +173,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                     stroke-linejoin="miter" stroke-linecap="butt"
                     clip-path="url(#m-clip-d-wm)" />
               <rect x="103" y="44" width="24" height="71" fill="#D4A574" opacity="0.2"
-                    transform="rotate(2, 115, 80)" />
-              <rect x="115" y="62" width="24" height="53" fill="#D4A574"
-                    transform="rotate(4, 127, 88)" />
+                    transform="rotate(0.5, 115, 80)" />
+              <rect x="109" y="62" width="24" height="53" fill="#D4A574"
+                    transform="rotate(1.5, 121, 88)" />
               <text x="165" y="72" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="700" font-size="32" fill="#2D3748" letter-spacing="2">MOVE TO</text>
               <text x="165" y="106" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="700" font-size="32" fill="#2D3748" letter-spacing="2">DIGITAL</text>
             </svg>
