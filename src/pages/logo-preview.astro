@@ -189,7 +189,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <p class="text-text-muted text-sm mb-6">Same rounded geometry as A, but the displaced piece is a D letterform — the M is literally moving to D(igital).</p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div class="bg-white rounded-2xl border border-border p-12 flex items-center justify-center">
-            <svg viewBox="0 0 150 120" xmlns="http://www.w3.org/2000/svg" class="w-32 h-32">
+            <svg viewBox="0 0 172 120" xmlns="http://www.w3.org/2000/svg" class="w-32 h-32">
               <!-- Main M body — rounded strokes -->
               <path d="M 15 110 L 15 12 L 65 62 L 115 12 L 115 48"
                     stroke="#C2714F" stroke-width="22" fill="none"
@@ -198,25 +198,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <line x1="116" y1="48" x2="116" y2="110"
                     stroke="#D4A574" stroke-width="22" stroke-linecap="round"
                     opacity="0.15" transform="rotate(0.5, 116, 79)" />
-              <!-- D letterform — the piece has become a D -->
-              <path d="M 113,56 L 113,112 L 122,112 C 144,112 144,56 122,56 Z
-                       M 119,64 L 119,104 C 137,104 137,64 119,64 Z"
+              <!-- D letterform — spine is 22px wide (matches M stroke), bow extends right -->
+              <path d="M 107,56 L 129,56 C 164,56 164,112 129,112 L 107,112 Z
+                       M 129,65 C 153,65 153,103 129,103 Z"
                     fill="#D4A574" fill-rule="evenodd" />
             </svg>
           </div>
           <div class="bg-white rounded-2xl border border-border p-12 flex items-center justify-center">
-            <svg viewBox="0 0 450 120" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-[380px]">
+            <svg viewBox="0 0 470 120" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-[400px]">
               <path d="M 15 110 L 15 12 L 65 62 L 115 12 L 115 48"
                     stroke="#C2714F" stroke-width="22" fill="none"
                     stroke-linecap="round" stroke-linejoin="round" />
               <line x1="116" y1="48" x2="116" y2="110"
                     stroke="#D4A574" stroke-width="22" stroke-linecap="round"
                     opacity="0.15" transform="rotate(0.5, 116, 79)" />
-              <path d="M 113,56 L 113,112 L 122,112 C 144,112 144,56 122,56 Z
-                       M 119,64 L 119,104 C 137,104 137,64 119,64 Z"
+              <path d="M 107,56 L 129,56 C 164,56 164,112 129,112 L 107,112 Z
+                       M 129,65 C 153,65 153,103 129,103 Z"
                     fill="#D4A574" fill-rule="evenodd" />
-              <text x="170" y="72" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="700" font-size="32" fill="#2D3748" letter-spacing="2">MOVE TO</text>
-              <text x="170" y="106" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="700" font-size="32" fill="#2D3748" letter-spacing="2">DIGITAL</text>
+              <text x="185" y="72" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="700" font-size="32" fill="#2D3748" letter-spacing="2">MOVE TO</text>
+              <text x="185" y="106" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="700" font-size="32" fill="#2D3748" letter-spacing="2">DIGITAL</text>
             </svg>
           </div>
         </div>
@@ -228,10 +228,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <p class="text-text-muted text-sm mb-6">Same bold flat-topped geometry as D, but the displaced piece is a D letterform. The M moves to D(igital).</p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div class="bg-white rounded-2xl border border-border p-12 flex items-center justify-center">
-            <svg viewBox="0 0 150 120" xmlns="http://www.w3.org/2000/svg" class="w-32 h-32">
+            <svg viewBox="0 0 175 120" xmlns="http://www.w3.org/2000/svg" class="w-32 h-32">
               <defs>
                 <clipPath id="m-clip-f">
-                  <rect x="0" y="5" width="150" height="115" />
+                  <rect x="0" y="5" width="175" height="115" />
                 </clipPath>
               </defs>
               <!-- Main M body — flat-topped -->
@@ -242,17 +242,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <!-- Ghost trail — rectangular M leg shape -->
               <rect x="103" y="44" width="24" height="71" fill="#D4A574" opacity="0.15"
                     transform="rotate(0.5, 115, 80)" />
-              <!-- D letterform -->
-              <path d="M 111,53 L 111,115 L 121,115 C 143,115 143,53 121,53 Z
-                       M 117,61 L 117,107 C 136,107 136,61 117,61 Z"
+              <!-- D letterform — spine is 24px wide (matches M stroke), bow extends right -->
+              <path d="M 109,53 L 133,53 C 168,53 168,115 133,115 L 109,115 Z
+                       M 133,62 C 157,62 157,106 133,106 Z"
                     fill="#D4A574" fill-rule="evenodd" />
             </svg>
           </div>
           <div class="bg-white rounded-2xl border border-border p-12 flex items-center justify-center">
-            <svg viewBox="0 0 450 120" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-[380px]">
+            <svg viewBox="0 0 470 120" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-[400px]">
               <defs>
                 <clipPath id="m-clip-f-wm">
-                  <rect x="0" y="5" width="150" height="115" />
+                  <rect x="0" y="5" width="175" height="115" />
                 </clipPath>
               </defs>
               <path d="M 15 115 L 15 -15 L 65 58 L 115 -15 L 115 44"
@@ -261,11 +261,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                     clip-path="url(#m-clip-f-wm)" />
               <rect x="103" y="44" width="24" height="71" fill="#D4A574" opacity="0.15"
                     transform="rotate(0.5, 115, 80)" />
-              <path d="M 111,53 L 111,115 L 121,115 C 143,115 143,53 121,53 Z
-                       M 117,61 L 117,107 C 136,107 136,61 117,61 Z"
+              <path d="M 109,53 L 133,53 C 168,53 168,115 133,115 L 109,115 Z
+                       M 133,62 C 157,62 157,106 133,106 Z"
                     fill="#D4A574" fill-rule="evenodd" />
-              <text x="170" y="72" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="700" font-size="32" fill="#2D3748" letter-spacing="2">MOVE TO</text>
-              <text x="170" y="106" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="700" font-size="32" fill="#2D3748" letter-spacing="2">DIGITAL</text>
+              <text x="190" y="72" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="700" font-size="32" fill="#2D3748" letter-spacing="2">MOVE TO</text>
+              <text x="190" y="106" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="700" font-size="32" fill="#2D3748" letter-spacing="2">DIGITAL</text>
             </svg>
           </div>
         </div>
