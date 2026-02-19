@@ -1,0 +1,52 @@
+---
+const caseStudies = [
+  {
+    label: 'Case Study',
+    title: 'Security Events \u2192 SMS Notifications',
+    description: 'Event-driven middleware connecting Gallagher Command Centre to Telstra\u2019s messaging platform. mTLS, OAuth2, real-time alerting.',
+    href: '/case-studies',
+  },
+  {
+    label: 'Case Study',
+    title: 'Structured Intake Automation',
+    description: 'Transforming standardised PDF assessment instruments into interactive digital workflows with real-time scoring.',
+    href: '/case-studies',
+  },
+];
+---
+
+<section class="py-16 md:py-24 bg-bg-alt">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="font-[family-name:var(--font-family-heading)] text-3xl font-normal text-secondary mb-3">
+        Selected Work
+      </h2>
+      <p class="text-text-muted max-w-2xl mx-auto">
+        Architecture and delivery engagements across integration, security, and automation.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {caseStudies.map((study) => (
+        <div class="bg-surface rounded-2xl border border-border p-6 md:p-8 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300">
+          <span class="inline-block text-xs uppercase tracking-wider text-text-muted font-medium mb-3">
+            {study.label}
+          </span>
+          <h3 class="font-[family-name:var(--font-family-heading)] text-xl font-normal text-secondary mb-3">
+            {study.title}
+          </h3>
+          <p class="text-text-muted text-sm leading-relaxed mb-5">
+            {study.description}
+          </p>
+          <a
+            href={study.href}
+            class="group inline-flex items-center text-primary font-medium text-sm transition-colors hover:text-primary-dark"
+          >
+            Read more
+            <span class="inline-block ml-1 transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

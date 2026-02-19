@@ -1,0 +1,65 @@
+---
+const apps = [
+  {
+    icon: 'https://cdn.lordicon.com/puvaffet.json',
+    name: 'ClientForms.app',
+    description: 'Clinician-facing assessment workflow tool',
+    status: 'In Development',
+    statusClasses: 'bg-accent/20 text-accent',
+  },
+  {
+    icon: 'https://cdn.lordicon.com/hrqwmutt.json',
+    name: 'WaitingForAMate.com',
+    description: 'Community referral app',
+    status: 'Testing',
+    statusClasses: 'bg-secondary-light/20 text-secondary',
+  },
+];
+---
+
+<section class="py-16 md:py-24 bg-bg">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="font-[family-name:var(--font-family-heading)] text-3xl font-normal text-secondary mb-3">
+        Apps &amp; Support
+      </h2>
+      <p class="text-text-muted max-w-2xl mx-auto">
+        Tools I've built. If you're using one and need help, start here.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+      {apps.map((app) => (
+        <div class="bg-surface rounded-2xl border border-border p-6 md:p-8 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300">
+          <div class="flex items-start justify-between mb-4">
+            <lord-icon
+              src={app.icon}
+              trigger="hover"
+              colors="primary:#C2714F,secondary:#2D3748"
+              style="width:56px;height:56px"
+            />
+            <span class={`text-xs font-medium rounded-full px-3 py-1 ${app.statusClasses}`}>
+              {app.status}
+            </span>
+          </div>
+          <h3 class="font-[family-name:var(--font-family-heading)] text-xl font-normal text-secondary mb-2">
+            {app.name}
+          </h3>
+          <p class="text-text-muted text-sm leading-relaxed">
+            {app.description}
+          </p>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center mt-10">
+      <a
+        href="/support"
+        class="group inline-flex items-center text-primary font-medium transition-colors hover:text-primary-dark"
+      >
+        Visit Support Hub
+        <span class="inline-block ml-1 transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,9 +1,22 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import ProofPillars from '../components/ProofPillars.astro';
+import SelectedWork from '../components/SelectedWork.astro';
+import AppsSupport from '../components/AppsSupport.astro';
+import ContactCTA from '../components/ContactCTA.astro';
+import ScrollReveal from '../components/ScrollReveal.astro';
 ---
 <BaseLayout title="Move to Digital — Automation & Integration Architecture" description="Secure automation and integration architecture for regulated environments. Independent practice based in Brisbane, Australia.">
-  <section class="py-20 text-center">
-    <h1 class="text-4xl font-bold text-secondary">Layout Working</h1>
-    <p class="text-text-muted mt-4">Base layout with nav and footer rendered successfully.</p>
-  </section>
+  <Hero />
+  <ScrollReveal>
+    <ProofPillars />
+  </ScrollReveal>
+  <ScrollReveal>
+    <SelectedWork />
+  </ScrollReveal>
+  <ScrollReveal>
+    <AppsSupport />
+  </ScrollReveal>
+  <ContactCTA />
 </BaseLayout>

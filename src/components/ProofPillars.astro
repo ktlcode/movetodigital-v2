@@ -1,0 +1,49 @@
+---
+import ScrollReveal from './ScrollReveal.astro';
+
+const pillars = [
+  {
+    icon: 'https://cdn.lordicon.com/ktsahwvc.json',
+    title: 'Integration Architecture',
+    body: 'Event-driven APIs, secure middleware, and system integration for platforms that need to talk to each other reliably. REST, webhooks, message queues — built for auditability and scale.',
+    delay: 0,
+  },
+  {
+    icon: 'https://cdn.lordicon.com/dicvhxpz.json',
+    title: 'Security-by-Design',
+    body: 'OAuth2 flows, mutual TLS, bearer token management, and least-privilege access patterns. Security is the architecture, not an afterthought.',
+    delay: 150,
+  },
+  {
+    icon: 'https://cdn.lordicon.com/zsaomnmb.json',
+    title: 'Delivery in Regulated Environments',
+    body: 'Proven delivery in government, utilities, and enterprise environments. NV1 security clearance. Compliance-aware architecture that meets the bar without over-engineering.',
+    delay: 300,
+  },
+];
+---
+
+<section class="py-16 md:py-24 bg-bg-alt">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {pillars.map((pillar) => (
+        <ScrollReveal delay={pillar.delay}>
+          <div class="bg-surface rounded-2xl border border-border p-8 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 h-full">
+            <lord-icon
+              src={pillar.icon}
+              trigger="hover"
+              colors="primary:#C2714F,secondary:#2D3748"
+              style="width:56px;height:56px"
+            />
+            <h3 class="font-[family-name:var(--font-family-heading)] text-xl font-normal text-secondary mt-5 mb-3">
+              {pillar.title}
+            </h3>
+            <p class="text-text-muted text-sm leading-relaxed">
+              {pillar.body}
+            </p>
+          </div>
+        </ScrollReveal>
+      ))}
+    </div>
+  </div>
+</section>
