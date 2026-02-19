@@ -1,1 +1,84 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #C2714F;
+  --color-primary-dark: #A85A3A;
+  --color-primary-light: #D4956F;
+  --color-secondary: #2D3748;
+  --color-secondary-light: #4A5568;
+  --color-accent: #D4A574;
+  --color-bg: #FAFAF7;
+  --color-bg-alt: #F3F0EB;
+  --color-surface: #FFFFFF;
+  --color-text: #2D2A26;
+  --color-text-muted: #6B6560;
+  --color-border: #E5E0DA;
+
+  --font-family-heading: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-family-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-family-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+body {
+  font-family: var(--font-family-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.75rem 1.5rem;
+  background: var(--color-secondary);
+  color: white;
+  border-radius: 0 0 0.5rem 0.5rem;
+  z-index: 100;
+  font-weight: 600;
+  transition: top 0.2s;
+}
+.skip-to-content:focus {
+  top: 0;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  opacity: 0;
+}
+.reveal.revealed {
+  animation: reveal-up 0.6s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; }
+  .reveal.revealed { animation: none; opacity: 1; }
+  html { scroll-behavior: auto; }
+}
+
+lord-icon {
+  width: 48px;
+  height: 48px;
+}
+
+::selection {
+  background-color: var(--color-primary-light);
+  color: var(--color-secondary);
+}
