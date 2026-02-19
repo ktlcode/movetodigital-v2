@@ -11,6 +11,7 @@ interface Props {
 const { name, description, status, statusColor, icon, url } = Astro.props;
 
 const statusClasses: Record<string, string> = {
+  green: 'bg-green-100 text-green-800',
   accent: 'bg-accent/20 text-accent',
   'secondary-light': 'bg-secondary-light/20 text-secondary',
 };
