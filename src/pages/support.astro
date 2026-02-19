@@ -1,0 +1,126 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AppCard from '../components/AppCard.astro';
+import ScrollReveal from '../components/ScrollReveal.astro';
+import ContactCTA from '../components/ContactCTA.astro';
+---
+<BaseLayout
+  title="Support — Move to Digital"
+  description="Support hub for Move to Digital applications. Get help with ClientForms.app and WaitingForAMate.com."
+  canonicalPath="/support"
+>
+  <!-- Page Header -->
+  <section class="py-16 md:py-20">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <ScrollReveal>
+        <h1 class="font-[family-name:var(--font-family-heading)] text-4xl md:text-5xl font-normal text-text mb-4">
+          Apps &amp; Support
+        </h1>
+        <p class="text-text-muted text-lg">
+          If you're using one of my apps and need help, you're in the right place.
+        </p>
+      </ScrollReveal>
+    </div>
+  </section>
+
+  <!-- App Cards -->
+  <section class="pb-16 md:pb-20">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <ScrollReveal>
+          <AppCard
+            icon="https://cdn.lordicon.com/puvaffet.json"
+            name="ClientForms.app"
+            description="Clinician-facing assessment workflow tool. Structured digital forms with real-time scoring for clinical practice."
+            status="In Development"
+            statusColor="accent"
+            url="clientforms.app"
+          />
+        </ScrollReveal>
+        <ScrollReveal delay={100}>
+          <AppCard
+            icon="https://cdn.lordicon.com/hrqwmutt.json"
+            name="WaitingForAMate.com"
+            description="Community referral app. Share and discover services through trusted connections."
+            status="Testing"
+            statusColor="secondary-light"
+            url="waitingforamate.com"
+          />
+        </ScrollReveal>
+      </div>
+    </div>
+  </section>
+
+  <!-- Support Policy -->
+  <section class="bg-bg-alt py-16 md:py-20">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <ScrollReveal>
+        <h2 class="font-[family-name:var(--font-family-heading)] text-2xl md:text-3xl font-normal text-text mb-10">
+          Support Policy
+        </h2>
+      </ScrollReveal>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <ScrollReveal>
+          <div>
+            <h3 class="text-sm uppercase tracking-widest text-text-muted font-semibold mb-3">
+              Response Times
+            </h3>
+            <p class="text-text leading-relaxed">
+              Best-effort response within 2 business days. Critical security issues are prioritised.
+            </p>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal delay={100}>
+          <div>
+            <h3 class="text-sm uppercase tracking-widest text-text-muted font-semibold mb-3">
+              Security Reporting
+            </h3>
+            <p class="text-text leading-relaxed">
+              If you've found a security vulnerability, please report it to
+              <a href="mailto:security@movetodigital.au" class="text-primary hover:text-primary-dark transition-colors duration-200">security@movetodigital.au</a>.
+              See our <a href="/security" class="text-primary hover:text-primary-dark transition-colors duration-200">Security page</a> for full disclosure guidelines.
+            </p>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal delay={200}>
+          <div>
+            <h3 class="text-sm uppercase tracking-widest text-text-muted font-semibold mb-3">
+              General Enquiries
+            </h3>
+            <p class="text-text leading-relaxed">
+              For all other support requests:
+              <a href="mailto:contact@movetodigital.au" class="text-primary hover:text-primary-dark transition-colors duration-200">contact@movetodigital.au</a>
+            </p>
+          </div>
+        </ScrollReveal>
+      </div>
+    </div>
+  </section>
+
+  <!-- System Status -->
+  <section class="py-12 md:py-16">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <ScrollReveal>
+        <h2 class="font-[family-name:var(--font-family-heading)] text-2xl md:text-3xl font-normal text-text mb-6">
+          System Status
+        </h2>
+        <div class="flex items-center gap-3 mb-3">
+          <span class="relative flex h-3 w-3">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+          </span>
+          <span class="text-text font-medium">All systems operational</span>
+        </div>
+        <p class="text-text-muted text-sm">
+          Status is updated manually. For real-time issues, contact support.
+        </p>
+      </ScrollReveal>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <ContactCTA />
+</BaseLayout>

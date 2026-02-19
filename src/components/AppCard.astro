@@ -1,0 +1,49 @@
+---
+interface Props {
+  name: string;
+  description: string;
+  status: string;
+  statusColor: string;
+  icon: string;
+  url?: string;
+}
+
+const { name, description, status, statusColor, icon, url } = Astro.props;
+
+const statusClasses: Record<string, string> = {
+  accent: 'bg-accent/20 text-accent',
+  'secondary-light': 'bg-secondary-light/20 text-secondary',
+};
+
+const badgeClass = statusClasses[statusColor] || 'bg-bg-alt text-text-muted';
+---
+
+<div class="bg-surface rounded-2xl border border-border p-6 md:p-8 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300">
+  <div class="flex items-start justify-between mb-4">
+    <lord-icon
+      src={icon}
+      trigger="hover"
+      colors="primary:#C2714F,secondary:#2D3748"
+      style="width:56px;height:56px"
+    />
+    <span class={`text-xs font-medium rounded-full px-3 py-1 ${badgeClass}`}>
+      {status}
+    </span>
+  </div>
+  <h3 class="font-[family-name:var(--font-family-heading)] text-xl font-normal text-text mb-2">
+    {name}
+  </h3>
+  <p class="text-text-muted text-sm leading-relaxed mb-3">
+    {description}
+  </p>
+  {url && (
+    <a
+      href={`https://${url}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="text-text-muted text-sm hover:text-primary transition-colors duration-200"
+    >
+      {url} &rarr;
+    </a>
+  )}
+</div>
