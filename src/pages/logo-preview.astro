@@ -91,10 +91,38 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <p class="text-text-muted text-sm mb-6">Same bold geometry as B. Displaced segment overlaps the bottom of the main right leg — caught mid-separation.</p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div class="bg-white rounded-2xl border border-border p-12 flex items-center justify-center">
-            <!-- VARIATION C: ICON -->
+            <svg viewBox="0 0 140 120" xmlns="http://www.w3.org/2000/svg" class="w-32 h-32">
+              <defs>
+                <clipPath id="m-clip-c">
+                  <rect x="0" y="5" width="140" height="115" />
+                </clipPath>
+              </defs>
+              <!-- Main M body — right leg extends lower to show overlap zone -->
+              <path d="M 15 115 L 15 -15 L 65 58 L 115 -15 L 115 56"
+                    stroke="#C2714F" stroke-width="24" fill="none"
+                    stroke-linejoin="miter" stroke-linecap="butt"
+                    clip-path="url(#m-clip-c)" />
+              <!-- Displaced segment — starts HIGHER, overlapping the main right leg bottom -->
+              <rect x="111" y="40" width="24" height="75" fill="#D4A574"
+                    transform="rotate(3, 123, 78)" />
+            </svg>
           </div>
           <div class="bg-white rounded-2xl border border-border p-12 flex items-center justify-center">
-            <!-- VARIATION C: WORDMARK -->
+            <svg viewBox="0 0 440 120" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-[380px]">
+              <defs>
+                <clipPath id="m-clip-c-wm">
+                  <rect x="0" y="5" width="140" height="115" />
+                </clipPath>
+              </defs>
+              <path d="M 15 115 L 15 -15 L 65 58 L 115 -15 L 115 56"
+                    stroke="#C2714F" stroke-width="24" fill="none"
+                    stroke-linejoin="miter" stroke-linecap="butt"
+                    clip-path="url(#m-clip-c-wm)" />
+              <rect x="111" y="40" width="24" height="75" fill="#D4A574"
+                    transform="rotate(3, 123, 78)" />
+              <text x="160" y="72" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="700" font-size="32" fill="#2D3748" letter-spacing="2">MOVE TO</text>
+              <text x="160" y="106" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="700" font-size="32" fill="#2D3748" letter-spacing="2">DIGITAL</text>
+            </svg>
           </div>
         </div>
       </div>
