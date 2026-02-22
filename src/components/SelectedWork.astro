@@ -4,13 +4,19 @@ const caseStudies = [
     label: 'Case Study',
     title: 'Security Events \u2192 SMS Notifications',
     description: 'Event-driven middleware connecting Gallagher Command Centre to Telstra\u2019s messaging platform. mTLS, OAuth2, rules-based filtering, operator dashboard. AI-assisted engineering.',
-    href: '/case-studies',
+    href: '/case-studies/gallagher-command-centre-sms-integration',
   },
   {
     label: 'Case Study',
     title: 'Structured Intake Automation',
     description: 'PDF assessment instruments transformed into interactive digital workflows. Canonical data modelling, automated scoring, governance-by-design.',
-    href: '/case-studies',
+    href: '/case-studies/structured-intake-automation',
+  },
+  {
+    label: 'Case Study',
+    title: 'Real-Time Cross-Platform Application',
+    description: 'Cross-platform architecture: Expo React Native, Convex real-time backend, Cloudflare edge auth proxy. Type-safe end-to-end, reactive subscriptions, regional data partitioning.',
+    href: '/case-studies/real-time-cross-platform-application',
   },
 ];
 ---
@@ -26,7 +32,7 @@ const caseStudies = [
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       {caseStudies.map((study) => (
         <div class="bg-surface rounded-2xl border border-border p-6 md:p-8 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300">
           <span class="inline-block text-xs uppercase tracking-wider text-text-muted font-medium mb-3">

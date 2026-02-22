@@ -1,0 +1,175 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ScrollReveal from '../../components/ScrollReveal.astro';
+import CaseStudyCard from '../../components/CaseStudyCard.astro';
+import CrossPlatformDiagram from '../../components/CrossPlatformDiagram.astro';
+import ContactCTA from '../../components/ContactCTA.astro';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Real-Time Cross-Platform Application Architecture — Expo, Convex, Cloudflare Edge",
+  "description": "Cross-platform application architecture using Expo React Native, Convex real-time backend, and Cloudflare edge functions. Type-safe end-to-end, reactive database subscriptions, multi-platform OAuth, and regional data partitioning.",
+  "author": {
+    "@type": "Organization",
+    "name": "Move to Digital",
+    "url": "https://movetodigital.au"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Move to Digital",
+    "url": "https://movetodigital.au"
+  },
+  "mainEntityOfPage": "https://movetodigital.au/case-studies/real-time-cross-platform-application",
+  "keywords": ["Expo React Native", "Convex backend", "cross-platform architecture", "real-time database", "Cloudflare edge functions", "Better Auth", "TypeScript full-stack", "reactive subscriptions"]
+};
+---
+<BaseLayout
+  title="Real-Time Cross-Platform Application Architecture — Expo + Convex + Cloudflare | Move to Digital"
+  description="Cross-platform application architecture: Expo React Native, Convex real-time backend, Cloudflare edge auth proxy. Type-safe end-to-end, reactive database subscriptions, multi-platform OAuth, regional data partitioning."
+  canonicalPath="/case-studies/real-time-cross-platform-application"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <!-- Breadcrumb navigation -->
+  <section class="pt-8 pb-0">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <nav aria-label="Breadcrumb" class="text-sm text-text-muted">
+        <ol class="flex items-center gap-1.5">
+          <li><a href="/case-studies" class="hover:text-primary transition-colors">Case Studies</a></li>
+          <li class="text-border">/</li>
+          <li class="text-text">Real-Time Cross-Platform Application</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Case Study: Real-Time Cross-Platform Application -->
+  <section>
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <ScrollReveal>
+        <CaseStudyCard
+          title="Real-Time Cross-Platform Application"
+          engagement="Product architecture and build capability"
+        >
+          <p class="text-text-muted text-sm mb-6">
+            Expo React Native &harr; Convex Reactive Backend &harr; Cloudflare Edge
+          </p>
+
+          <!-- CONTEXT / PROBLEM -->
+          <div>
+            <h3 class="text-xs uppercase tracking-widest text-text-muted font-semibold mb-3">Context / Problem</h3>
+            <p class="text-text leading-relaxed text-base md:text-lg">
+              The product required a social application available on iOS, Android, and web from a single codebase, with real-time data synchronisation across all clients, multi-provider authentication (Google, Apple, email), regional content partitioning, and a gamification layer with leaderboards and lifecycle tracking. The architecture needed to support complex social graph queries, transactional email workflows, and edge-optimised OAuth, all while maintaining type safety end-to-end from database to UI.
+            </p>
+          </div>
+
+          <!-- CONSTRAINTS -->
+          <div>
+            <h3 class="text-xs uppercase tracking-widest text-text-muted font-semibold mb-3">Constraints</h3>
+            <ul class="space-y-2 text-text leading-relaxed text-base md:text-lg">
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span>Three deployment targets (iOS, Android, web) from a single TypeScript codebase. No platform-specific forks.</span></li>
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span>Real-time data synchronisation. Changes must propagate to all connected clients without manual refresh or polling.</span></li>
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span>Multi-provider OAuth (Google, Apple) with custom domain continuity. Users must see the product domain throughout the auth flow, not the backend provider.</span></li>
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span>Regional data partitioning. Content catalogue varies by geography with global and region-specific entries.</span></li>
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span>Rate-limited external APIs (email provider). System must queue, prioritise, and retry without message loss.</span></li>
+            </ul>
+          </div>
+
+          <!-- SOLUTION APPROACH -->
+          <div>
+            <h3 class="text-xs uppercase tracking-widest text-text-muted font-semibold mb-3">Solution Approach</h3>
+            <p class="text-text leading-relaxed text-base md:text-lg">
+              Designed and built a reactive full-stack architecture centred on Convex as the real-time backend, Expo (React Native) as the cross-platform client framework, and Cloudflare edge functions as the OAuth and static hosting layer. The architecture eliminates REST APIs entirely. All client-server communication uses generated TypeScript SDKs with automatic real-time subscriptions. Authentication is handled by Better Auth with a custom Cloudflare Pages Function proxy that rewrites OAuth redirect headers to maintain custom domain continuity.
+            </p>
+          </div>
+
+          <!-- ARCHITECTURE -->
+          <div>
+            <h3 class="text-xs uppercase tracking-widest text-text-muted font-semibold mb-3">Architecture</h3>
+            <CrossPlatformDiagram />
+          </div>
+
+          <!-- AUTOMATION & INTEGRATION -->
+          <div>
+            <h3 class="text-xs uppercase tracking-widest text-text-muted font-semibold mb-3">Automation &amp; Integration</h3>
+            <ul class="space-y-3 text-text leading-relaxed text-base md:text-lg">
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span><strong class="text-secondary">Real-time reactive subscriptions</strong>. Convex database queries automatically subscribe to changes. Client components re-render when underlying data changes. Zero manual cache invalidation, zero polling.</span></li>
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span><strong class="text-secondary">Generated TypeScript SDK</strong>. Backend functions (queries, mutations, actions) are exposed to the client through a generated, fully-typed SDK. No REST endpoints, no API versioning, no serialisation layer.</span></li>
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span><strong class="text-secondary">Edge-optimised OAuth proxy</strong>. Cloudflare Pages Function intercepts OAuth callback redirects and rewrites <code class="text-sm bg-bg-alt px-1.5 py-0.5 rounded font-[family-name:var(--font-family-mono)]">Location</code> headers from the backend domain to the custom domain. Users see the product domain throughout the sign-in flow.</span></li>
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span><strong class="text-secondary">Multi-stage lifecycle tracking</strong>. Content entries follow a state machine (active &rarr; warning &rarr; suspended) with configurable grace periods. Cron jobs enforce time-based transitions. Users receive notifications at each stage.</span></li>
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span><strong class="text-secondary">Priority email queue</strong>. Transactional emails are queued with priority levels, daily/monthly quota enforcement, and exponential backoff retry. Immediate-priority emails bypass the queue; batch emails are aggregated and rate-limited.</span></li>
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span><strong class="text-secondary">Regional data partitioning</strong>. Content is region-aware with per-region seed data. Queries are scoped by user region with global fallback. Regional community groups enforce content isolation boundaries.</span></li>
+            </ul>
+          </div>
+
+          <!-- GOVERNANCE & CONTROLS -->
+          <div>
+            <h3 class="text-xs uppercase tracking-widest text-text-muted font-semibold mb-3">Governance &amp; Controls</h3>
+            <ul class="space-y-3 text-text leading-relaxed text-base md:text-lg">
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span><strong class="text-secondary">Identity &amp; access</strong>. Multi-provider authentication (Google OAuth, Apple Sign In, email/password, magic link) via Better Auth with custom Convex adapter. Native apps use platform-secure storage (SecureStore); web uses bearer tokens. Every backend function verifies session ownership before data access.</span></li>
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span><strong class="text-secondary">Data boundaries</strong>. All queries are scoped to the authenticated user. Cross-user operations verify ownership. Community content is isolated from private content. Global search excludes community-scoped data.</span></li>
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span><strong class="text-secondary">Soft deletes &amp; audit trail</strong>. User data is soft-deleted with deactivation reasons. Removal events are logged to audit tables. No hard deletes of user-generated content.</span></li>
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span><strong class="text-secondary">Rate limiting</strong>. Email dispatch is quota-controlled (daily and monthly caps). Queue backpressure defers non-critical messages. External API calls retry with exponential backoff.</span></li>
+            </ul>
+          </div>
+
+          <!-- SECURITY -->
+          <div>
+            <h3 class="text-xs uppercase tracking-widest text-text-muted font-semibold mb-3">Security</h3>
+            <p class="text-text leading-relaxed text-base md:text-lg">
+              All communication uses HTTPS/TLS. Native authentication tokens are stored in platform-secure storage (iOS Keychain / Android Keystore via SecureStore). Web authentication uses signed bearer tokens via <code class="text-sm bg-bg-alt px-1.5 py-0.5 rounded font-[family-name:var(--font-family-mono)]">Authorization</code> headers. OAuth flows are proxied through Cloudflare edge functions with header rewriting to prevent backend domain exposure. Database access is gated by session-verified functions. No direct client-to-database access. Email sending uses API-key-authenticated SMTP with queue-based rate limiting. Cloudflare provides SSL termination, DDoS protection, and DNS management.
+            </p>
+          </div>
+
+          <!-- AI-ASSISTED ENGINEERING -->
+          <div>
+            <h3 class="text-xs uppercase tracking-widest text-text-muted font-semibold mb-3">AI-Assisted Engineering</h3>
+            <p class="text-text leading-relaxed text-base md:text-lg">
+              AI tooling was used during the build phase to accelerate schema design, assist with complex Convex query optimisation, and generate seed data for regional content catalogues. Database migration scripts and email template generation were AI-assisted with manual review. All AI-generated code was validated through manual testing and Convex's type-safe compilation pipeline. AI did not make architectural decisions. It accelerated implementation of decisions already made.
+            </p>
+          </div>
+
+          <!-- DELIVERY NOTES -->
+          <div>
+            <h3 class="text-xs uppercase tracking-widest text-text-muted font-semibold mb-3">Delivery Notes</h3>
+            <ul class="space-y-2 text-text leading-relaxed text-base md:text-lg">
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span>Delivered as a complete cross-platform system: iOS app, Android app, web application, real-time backend, email infrastructure, and edge authentication proxy.</span></li>
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span>24-table database schema with indexing strategy, full-text search, and migration framework.</span></li>
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span>Over-the-air update capability (Expo Updates) for rapid iteration without app store review cycles.</span></li>
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span>Production deployment across Convex (backend), Cloudflare Pages (web + edge functions), and app stores (iOS/Android).</span></li>
+            </ul>
+          </div>
+
+          <!-- OUTCOMES -->
+          <div>
+            <h3 class="text-xs uppercase tracking-widest text-text-muted font-semibold mb-3">Outcomes</h3>
+            <ul class="space-y-2 text-text leading-relaxed text-base md:text-lg">
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span>Single TypeScript codebase serving three platforms (iOS, Android, web) with approximately 80% code sharing.</span></li>
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span>Zero-latency data synchronisation across all connected clients via reactive subscriptions. No manual refresh required.</span></li>
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span>Custom domain OAuth flow maintaining brand continuity across Google and Apple sign-in providers.</span></li>
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span>Type-safe data pipeline from database schema through backend functions to client components. Compile-time guarantees across the full stack.</span></li>
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span>Regional data architecture supporting multi-geography content catalogues with isolated community boundaries.</span></li>
+            </ul>
+          </div>
+
+          <!-- EXTENSIBILITY -->
+          <div>
+            <h3 class="text-xs uppercase tracking-widest text-text-muted font-semibold mb-3">Extensibility / Next Steps</h3>
+            <p class="text-text leading-relaxed text-base md:text-lg">
+              Architecture supports horizontal feature addition through new Convex functions and schema extensions. Real-time subscription model scales with additional data types without infrastructure changes. Regional partitioning can expand to new geographies by adding seed data. Email queue pattern is reusable for push notification channels. Authentication layer supports adding new OAuth providers through Better Auth plugin configuration.
+            </p>
+          </div>
+
+          <!-- Engagement label -->
+          <p class="text-text-muted text-sm mt-6 pt-6 border-t border-border">
+            Product architecture and build capability. Full-stack cross-platform delivery demonstrating end-to-end system design.
+          </p>
+        </CaseStudyCard>
+      </ScrollReveal>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <ContactCTA />
+</BaseLayout>

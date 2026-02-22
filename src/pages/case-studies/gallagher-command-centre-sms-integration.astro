@@ -1,0 +1,171 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ScrollReveal from '../../components/ScrollReveal.astro';
+import CaseStudyCard from '../../components/CaseStudyCard.astro';
+import ArchitectureDiagram from '../../components/ArchitectureDiagram.astro';
+import ContactCTA from '../../components/ContactCTA.astro';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Gallagher Command Centre SMS Integration — REST API Bridge to Telstra Messaging",
+  "description": "Enterprise middleware bridging Gallagher Command Centre's REST API to Telstra's Messaging API v3 for real-time SMS security notifications. mTLS, OAuth2, event-driven architecture.",
+  "author": {
+    "@type": "Organization",
+    "name": "Move to Digital",
+    "url": "https://movetodigital.au"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Move to Digital",
+    "url": "https://movetodigital.au"
+  },
+  "mainEntityOfPage": "https://movetodigital.au/case-studies/gallagher-command-centre-sms-integration",
+  "keywords": ["Gallagher Command Centre API", "Gallagher REST API", "Gallagher SMS integration", "Telstra Messaging API", "mTLS", "OAuth2", "security event notifications", "enterprise middleware"]
+};
+---
+<BaseLayout
+  title="Gallagher Command Centre SMS Integration — API Bridge to Telstra Messaging | Move to Digital"
+  description="How we built a secure middleware bridge connecting Gallagher Command Centre's REST API to Telstra's Messaging API v3 for real-time SMS security notifications. mTLS, OAuth2, event-driven architecture."
+  canonicalPath="/case-studies/gallagher-command-centre-sms-integration"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <!-- Breadcrumb navigation -->
+  <section class="pt-8 pb-0">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <nav aria-label="Breadcrumb" class="text-sm text-text-muted">
+        <ol class="flex items-center gap-1.5">
+          <li><a href="/case-studies" class="hover:text-primary transition-colors">Case Studies</a></li>
+          <li class="text-border">/</li>
+          <li class="text-text">Gallagher Command Centre SMS Integration</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Case Study: Security Events -> SMS Notifications -->
+  <section>
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <ScrollReveal>
+        <CaseStudyCard
+          title="Security Events &rarr; SMS Notifications"
+          engagement="Independent architecture + build engagement"
+        >
+          <p class="text-text-muted text-sm mb-6">
+            Gallagher Command Centre &harr; Telstra Messaging API
+          </p>
+
+          <!-- CONTEXT / PROBLEM -->
+          <div>
+            <h3 class="text-xs uppercase tracking-widest text-text-muted font-semibold mb-3">Context / Problem</h3>
+            <p class="text-text leading-relaxed text-base md:text-lg">
+              The client's physical security platform (Gallagher Command Centre) generates critical events (door forced, access denied, alarm triggered) but has no native SMS notification capability. Operators needed real-time alerts on mobile devices, with intelligent filtering to prevent alert fatigue. The requirement was for a middleware bridge that could poll, process, and deliver notifications reliably without introducing new security risk.
+            </p>
+          </div>
+
+          <!-- CONSTRAINTS -->
+          <div>
+            <h3 class="text-xs uppercase tracking-widest text-text-muted font-semibold mb-3">Constraints</h3>
+            <ul class="space-y-2 text-text leading-relaxed text-base md:text-lg">
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span>Physical security environment. No tolerance for missed events or false negatives.</span></li>
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span>Gallagher API requires mutual TLS client certificate authentication.</span></li>
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span>Telstra Messaging API v3 requires OAuth2 bearer token management with automatic refresh.</span></li>
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span>Minimal PII handling. Event metadata only, no personal data in transit.</span></li>
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span>Solution must be operable by non-technical staff after handover.</span></li>
+            </ul>
+          </div>
+
+          <!-- SOLUTION APPROACH -->
+          <div>
+            <h3 class="text-xs uppercase tracking-widest text-text-muted font-semibold mb-3">Solution Approach</h3>
+            <p class="text-text leading-relaxed text-base md:text-lg">
+              Designed and built an event-driven middleware bridge. The system polls Gallagher's REST API over mutual TLS, processes and deduplicates events through a configurable rules engine, composes human-readable notification messages, and delivers via Telstra's Messaging API v3.
+            </p>
+          </div>
+
+          <!-- ARCHITECTURE -->
+          <div>
+            <h3 class="text-xs uppercase tracking-widest text-text-muted font-semibold mb-3">Architecture</h3>
+            <ArchitectureDiagram />
+          </div>
+
+          <!-- AUTOMATION & INTEGRATION -->
+          <div>
+            <h3 class="text-xs uppercase tracking-widest text-text-muted font-semibold mb-3">Automation &amp; Integration</h3>
+            <ul class="space-y-3 text-text leading-relaxed text-base md:text-lg">
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span><strong class="text-secondary">Event polling</strong>. Scheduled polling of Gallagher REST API with configurable intervals and checkpoint tracking.</span></li>
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span><strong class="text-secondary">Rules engine</strong>. Configurable event filtering, deduplication, and alert routing. Operators can adjust thresholds without code changes.</span></li>
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span><strong class="text-secondary">Message composition</strong>. Events are transformed into human-readable SMS notifications with contextual detail.</span></li>
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span><strong class="text-secondary">Rate limiting and queuing</strong>. Message delivery is rate-limited and queued to comply with Telstra API constraints and prevent notification storms.</span></li>
+            </ul>
+          </div>
+
+          <!-- GOVERNANCE & CONTROLS -->
+          <div>
+            <h3 class="text-xs uppercase tracking-widest text-text-muted font-semibold mb-3">Governance &amp; Controls</h3>
+            <ul class="space-y-3 text-text leading-relaxed text-base md:text-lg">
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span><strong class="text-secondary">Identity</strong>. Gallagher API authenticated via mutual TLS client certificates. Telstra API via OAuth2 bearer tokens with automatic refresh. No shared secrets.</span></li>
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span><strong class="text-secondary">Data boundaries</strong>. Event metadata only is processed. No PII is stored or transmitted beyond what the notification requires. Message content is ephemeral.</span></li>
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span><strong class="text-secondary">Audit logging</strong>. Every event received, every rule evaluation, every notification sent is logged with timestamps and correlation identifiers.</span></li>
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span><strong class="text-secondary">Operator controls</strong>. Non-technical operators manage filtering rules, certificate renewal, and system configuration through a dashboard. No direct API or database access required.</span></li>
+            </ul>
+          </div>
+
+          <!-- SECURITY -->
+          <div>
+            <h3 class="text-xs uppercase tracking-widest text-text-muted font-semibold mb-3">Security</h3>
+            <p class="text-text leading-relaxed text-base md:text-lg">
+              All communication uses TLS 1.2+. Gallagher API access is authenticated via mutual TLS client certificates. Telstra API uses OAuth2 bearer tokens with automatic refresh. API keys are hashed with PBKDF2 and stored with AES-256 encryption. The system handles minimal personal data, event metadata only, no PII in transit.
+            </p>
+          </div>
+
+          <!-- AI-ASSISTED ENGINEERING -->
+          <div>
+            <h3 class="text-xs uppercase tracking-widest text-text-muted font-semibold mb-3">AI-Assisted Engineering</h3>
+            <p class="text-text leading-relaxed text-base md:text-lg">
+              AI tooling was used during the build phase to accelerate scaffolding, improve edge-case analysis, and assist with documentation generation. All AI-generated outputs were manually reviewed and validated before integration. AI was not used for operational decision-making. The rules engine and notification logic are deterministic. AI assisted build velocity; it did not replace engineering judgement.
+            </p>
+          </div>
+
+          <!-- DELIVERY NOTES -->
+          <div>
+            <h3 class="text-xs uppercase tracking-widest text-text-muted font-semibold mb-3">Delivery Notes</h3>
+            <ul class="space-y-2 text-text leading-relaxed text-base md:text-lg">
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span>Delivered as a complete working system: middleware, operator dashboard, certificate management tooling, and audit logging.</span></li>
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span>Zero-touch deployment capability designed for non-technical operators.</span></li>
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span>Full documentation and operational runbooks provided for handover.</span></li>
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span>Deployment pending customer rollout scheduling.</span></li>
+            </ul>
+          </div>
+
+          <!-- OUTCOMES -->
+          <div>
+            <h3 class="text-xs uppercase tracking-widest text-text-muted font-semibold mb-3">Outcomes</h3>
+            <ul class="space-y-2 text-text leading-relaxed text-base md:text-lg">
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span>Working middleware with operator dashboard, certificate lifecycle management, and comprehensive audit logging.</span></li>
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span>Configurable rules engine enabling non-technical staff to manage alert filtering without developer intervention.</span></li>
+              <li class="flex gap-2"><span class="text-primary mt-1.5 shrink-0">&bull;</span><span>Architecture designed for zero-touch deployment in customer environments.</span></li>
+            </ul>
+          </div>
+
+          <!-- EXTENSIBILITY -->
+          <div>
+            <h3 class="text-xs uppercase tracking-widest text-text-muted font-semibold mb-3">Extensibility / Next Steps</h3>
+            <p class="text-text leading-relaxed text-base md:text-lg">
+              Architecture supports additional notification channels (email, Microsoft Teams webhooks), configurable multi-tenant deployment, and integration with additional event sources. Rate limiting and message queuing patterns are reusable across notification pipelines.
+            </p>
+          </div>
+
+          <!-- Engagement label -->
+          <p class="text-text-muted text-sm mt-6 pt-6 border-t border-border">
+            Delivered as an independent architecture + build engagement.
+          </p>
+        </CaseStudyCard>
+      </ScrollReveal>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <ContactCTA />
+</BaseLayout>

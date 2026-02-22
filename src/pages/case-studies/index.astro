@@ -1,0 +1,135 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ScrollReveal from '../../components/ScrollReveal.astro';
+import ContactCTA from '../../components/ContactCTA.astro';
+
+const caseStudies = [
+  {
+    title: 'Security Events \u2192 SMS Notifications',
+    subtitle: 'Gallagher Command Centre \u2194 Telstra Messaging API',
+    description: 'Event-driven middleware bridging Gallagher Command Centre\u2019s REST API to Telstra\u2019s Messaging API v3 for real-time SMS security notifications. mTLS authentication, OAuth2 token management, configurable rules engine, and operator dashboard.',
+    engagement: 'Independent architecture + build',
+    href: '/case-studies/gallagher-command-centre-sms-integration',
+    tags: ['mTLS', 'OAuth2', 'REST API', 'Event-Driven', 'Rules Engine'],
+  },
+  {
+    title: 'Structured Intake Automation',
+    subtitle: 'PDF \u2192 Canonical Schema \u2192 Interactive Digital Workflow',
+    description: 'Schema-driven architecture transforming PDF assessment instruments into interactive digital workflows with real-time scoring. Canonical data modelling, deterministic identity, and neurodivergent-first UX design.',
+    engagement: 'Product architecture and build capability',
+    href: '/case-studies/structured-intake-automation',
+    tags: ['Schema-Driven', 'SurveyJS', 'Real-Time Scoring', 'PDF Analysis', 'Canonical Model'],
+  },
+  {
+    title: 'Real-Time Cross-Platform Application',
+    subtitle: 'Expo React Native \u2194 Convex Reactive Backend \u2194 Cloudflare Edge',
+    description: 'Cross-platform application architecture serving iOS, Android, and web from a single TypeScript codebase. Reactive real-time database, generated type-safe SDK, edge-optimised OAuth proxy, regional data partitioning, and priority email queue.',
+    engagement: 'Product architecture and build capability',
+    href: '/case-studies/real-time-cross-platform-application',
+    tags: ['Expo', 'Convex', 'React Native', 'Real-Time', 'Cloudflare Edge', 'TypeScript'],
+  },
+];
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://movetodigital.au"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Case Studies",
+      "item": "https://movetodigital.au/case-studies"
+    }
+  ]
+};
+---
+<BaseLayout
+  title="Case Studies — Move to Digital | Automation & Integration Architecture"
+  description="Enterprise automation case studies: secure integration architecture, AI-enabled delivery, and governance-by-design for regulated environments. Gallagher Command Centre, Telstra API, schema-driven workflows."
+  canonicalPath="/case-studies"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
+
+  <!-- Page header -->
+  <section class="py-16 md:py-20">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <ScrollReveal>
+        <h1 class="font-[family-name:var(--font-family-heading)] text-4xl md:text-5xl font-bold text-text mb-4">
+          Case Studies
+        </h1>
+        <p class="text-text-muted text-lg max-w-2xl">
+          Enterprise automation and secure integration delivered with governance-by-design and AI-enabled engineering.
+        </p>
+      </ScrollReveal>
+    </div>
+  </section>
+
+  <!-- Case study cards -->
+  <section class="pb-16 md:pb-24">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <div class="space-y-6">
+        {caseStudies.map((study, index) => (
+          <ScrollReveal>
+            <a
+              href={study.href}
+              class="group block bg-surface rounded-2xl border border-border p-8 md:p-10 transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-0.5"
+            >
+              <div class="flex flex-col gap-6">
+                <!-- Header row -->
+                <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+                  <div class="flex-1 min-w-0">
+                    <span class="inline-block text-xs uppercase tracking-widest text-text-muted font-semibold bg-bg-alt border border-border rounded-full px-3 py-1 mb-4">
+                      {study.engagement}
+                    </span>
+                    <h2 class="font-[family-name:var(--font-family-heading)] text-2xl md:text-3xl font-semibold text-secondary group-hover:text-primary transition-colors duration-300">
+                      {study.title}
+                    </h2>
+                    <p class="text-text-muted text-sm mt-1.5 font-[family-name:var(--font-family-mono)]">
+                      {study.subtitle}
+                    </p>
+                  </div>
+                  <span class="hidden sm:flex items-center justify-center w-10 h-10 rounded-full border border-border text-text-muted group-hover:border-primary group-hover:text-primary group-hover:bg-primary/5 transition-all duration-300 shrink-0 mt-1">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="transition-transform duration-300 group-hover:translate-x-0.5">
+                      <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                </div>
+
+                <!-- Description -->
+                <p class="text-text leading-relaxed text-base">
+                  {study.description}
+                </p>
+
+                <!-- Tags -->
+                <div class="flex flex-wrap gap-2">
+                  {study.tags.map((tag) => (
+                    <span class="text-xs font-medium text-text-muted bg-bg-alt rounded px-2.5 py-1 border border-transparent group-hover:border-border transition-colors duration-300">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <!-- Mobile read link -->
+                <span class="sm:hidden inline-flex items-center text-primary font-medium text-sm">
+                  Read case study
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-1.5 transition-transform duration-200 group-hover:translate-x-1">
+                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </div>
+            </a>
+          </ScrollReveal>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <ContactCTA />
+</BaseLayout>
