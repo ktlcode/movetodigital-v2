@@ -1,7 +1,7 @@
 # Move to Digital — Enterprise Credibility Site Design
 
 **Date**: 2026-02-19
-**Status**: Approved
+**Status**: Approved (implemented, with subsequent refinements — see changelog below)
 
 ## Purpose
 
@@ -119,3 +119,17 @@ Will be provided as LLM-optimised prompts for generating:
 - LinkedIn: placeholder URL
 - ABN: placeholder
 - Client names: "Client (confidential)" where needed
+
+---
+
+## Changelog
+
+### 2026-02-22 — Enterprise positioning refinement
+- **Hero**: Added third CTA ("View Professional Profile"), added availability line for permanent roles and embedded engagements.
+- **Proof Pillars**: Renamed "Security-by-Design" to "AI-Enabled Delivery". Added workflow orchestration, structured data transformation, and edge-case analysis detail.
+- **Case studies**: Split from single page (`case-studies.astro`) to directory structure with individual pages per case study. Added third case study (Real-Time Cross-Platform Application). Added `CrossPlatformDiagram.astro` component.
+- **Engagement labels**: Changed "Product architecture + build (own IP)" to "Product architecture and build capability" across all case studies.
+- **About page**: Rewritten bio paragraph to position for permanent roles and long-term embedded positions.
+- **Em-dash removal**: All em-dashes (—) removed from body content site-wide, replaced with full stops, commas, or parentheses. Em-dashes retained in `<title>` tags only (SEO convention).
+- **Copy rules updated**: Added "avoid em-dashes" and "avoid startup/hobbyist language" to style guidelines.
+- **Tone**: Strengthened enterprise positioning throughout. Removed any language that could read as startup founder pitch, freelance solicitation, or AI evangelism.

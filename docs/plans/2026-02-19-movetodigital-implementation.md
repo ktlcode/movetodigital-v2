@@ -4,7 +4,9 @@
 
 **Goal:** Build a 6-page Astro static site for movetodigital.au — a professional credibility site for an enterprise automation/integration architect, with warm terracotta/slate palette, animated icons, and interactive elements.
 
-**Architecture:** Astro 5 static site with Tailwind CSS 4, Lordicon animated icons via CDN, vanilla JS for scroll animations, deployed to Cloudflare Pages. Content is hardcoded in Astro components (no CMS). Shared layout with responsive nav and footer. Pages: Home, Case Studies, Support, About, Privacy, Security.
+**Status:** All tasks complete. Site deployed to Cloudflare Pages. Subsequent refinements applied (see design doc changelog for 2026-02-22 positioning updates).
+
+**Architecture:** Astro 5 static site with Tailwind CSS 4, Lordicon animated icons via CDN, vanilla JS for scroll animations, deployed to Cloudflare Pages. Content is hardcoded in Astro components (no CMS). Shared layout with responsive nav and footer. Pages: Home, Case Studies (index + 3 individual pages), Support, About, Privacy, Security.
 
 **Tech Stack:** Astro 5, Tailwind CSS 4, TypeScript, Lordicon (CDN), vanilla JS (IntersectionObserver), Cloudflare Pages
 
@@ -36,7 +38,8 @@ movetodigital-v2/
 │   │   ├── ContactCTA.astro          # Contact call-to-action strip
 │   │   ├── CaseStudyCard.astro       # Reusable case study layout
 │   │   ├── AppCard.astro             # Support hub app card
-│   │   ├── ArchitectureDiagram.astro # SVG architecture diagram
+│   │   ├── ArchitectureDiagram.astro # SVG architecture diagram (Gallagher)
+│   │   ├── CrossPlatformDiagram.astro # SVG architecture diagram (Cross-platform)
 │   │   ├── ProcessSteps.astro        # How I Work steps (about page)
 │   │   └── ScrollReveal.astro        # Scroll-triggered animation wrapper
 │   ├── styles/
@@ -45,7 +48,11 @@ movetodigital-v2/
 │   │   └── scroll-reveal.js          # IntersectionObserver for scroll animations
 │   └── pages/
 │       ├── index.astro               # Home
-│       ├── case-studies.astro         # Case Studies
+│       ├── case-studies/
+│       │   ├── index.astro           # Case Studies listing
+│       │   ├── gallagher-command-centre-sms-integration.astro
+│       │   ├── structured-intake-automation.astro
+│       │   └── real-time-cross-platform-application.astro
 │       ├── support.astro             # Support Hub
 │       ├── about.astro               # About
 │       ├── privacy.astro             # Privacy

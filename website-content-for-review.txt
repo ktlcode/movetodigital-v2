@@ -1,7 +1,7 @@
 ================================================================================
 MOVE TO DIGITAL — FULL WEBSITE CONTENT
 ================================================================================
-Domain: movetodigital.au
+Domain: movetodigital.au / movetodigital.com.au
 Type: Static portfolio + support site (Astro framework, Cloudflare Pages)
 Last updated: February 2026
 ================================================================================
@@ -10,43 +10,68 @@ This document contains the complete text content of the Move to Digital website,
 structured page-by-page. Use this to review copy, tone, consistency, and
 messaging across the entire site.
 
+Site structure:
+  /                          Home
+  /case-studies              Case Studies (index/listing page)
+  /case-studies/gallagher-command-centre-sms-integration   Case Study A
+  /case-studies/structured-intake-automation                Case Study B
+  /case-studies/real-time-cross-platform-application        Case Study C
+  /about                     About
+  /support                   Support
+  /privacy                   Privacy
+  /security                  Security
+
 Navigation appears on every page:
   Links: Home | Case Studies | About | Support | Contact (mailto:contact@movetodigital.au)
-  Logo: "Move to Digital" with SVG icon mark
+  Logo: "Move to Digital" with SVG icon mark (Variation F — terracotta M with honey D)
 
 Footer appears on every page:
-  Brand: "Move to Digital — Automation & Integration Architecture"
+  Brand: "Move to Digital"
+  Tagline: "Automation Solutions Architecture"
   Quick Links: Home, Case Studies, About, Support
   Legal: Privacy, Security
   Contact: contact@movetodigital.au
   Copyright: "© 2026 Move to Digital. ABN Registered."
 
+Contact CTA appears on every main page (bottom):
+  [H2] Available for permanent roles and long-term contracts.
+  I'm based in Brisbane and available for embedded architecture and delivery
+  roles across Australia.
+  Also open to independent consulting and architecture engagements.
+  Buttons: contact@movetodigital.au | View LinkedIn Profile (linkedin.com/in/kevinsee-au/)
+
 
 ################################################################################
 PAGE 1: HOME (/)
 ################################################################################
-Meta title: "Move to Digital — Automation & Integration Architecture"
-Meta description: "Secure automation and integration architecture for regulated
-environments. Independent practice based in Brisbane, Australia."
+Meta title: "Move to Digital — Automation Solutions Architecture | AI-Enabled Enterprise Systems"
+Meta description: "Automation and integration architecture for regulated
+environments. AI-enabled delivery, governance-by-design, and secure system
+integration for government and enterprise. Brisbane, Australia."
 
 --------------------------------------------------------------------------------
 SECTION: Hero
 --------------------------------------------------------------------------------
 [Tagline]
-INDEPENDENT PRACTICE — BRISBANE, AUSTRALIA
+AUTOMATION SOLUTIONS ARCHITECT, BRISBANE, AUSTRALIA
 
 [H1] Move to Digital
 
 [Primary subtitle]
-Secure automation & integration architecture for regulated environments.
+AI-enabled automation and integration architecture for regulated environments.
 
 [Secondary subtitle]
-Event-driven integration, security-first design, and AI-enabled delivery for
+Secure system integration, workflow automation, and responsible AI delivery for
 government and enterprise.
 
+[Availability line]
+Available for permanent roles and long-term embedded architecture engagements
+across Australia.
+
 [Call-to-action buttons]
-- "Get in Touch" → mailto:contact@movetodigital.au
-- "View Case Studies" → /case-studies
+- "View Case Studies" -> /case-studies
+- "Get in Touch" -> mailto:contact@movetodigital.au
+- "View Professional Profile" -> #
 
 --------------------------------------------------------------------------------
 SECTION: Proof Pillars (3 columns)
@@ -55,168 +80,602 @@ SECTION: Proof Pillars (3 columns)
 [Pillar 1]
 [H3] Integration Architecture
 Event-driven APIs, secure middleware, and system integration for platforms that
-need to talk to each other reliably. REST, webhooks, message queues — built for
+need to talk to each other reliably. REST, webhooks, message queues. Built for
 auditability and scale.
 
 [Pillar 2]
-[H3] Security-by-Design
-OAuth2 flows, mutual TLS, bearer token management, and least-privilege access
-patterns. Security is the architecture, not an afterthought.
+[H3] AI-Enabled Delivery
+AI embedded into engineering and automation workflows, accelerating build,
+improving edge-case coverage, and enabling intelligent document processing.
+Applied to workflow orchestration, structured data transformation, and edge-case
+analysis. Always with human oversight and governance controls.
 
 [Pillar 3]
-[H3] Delivery in Regulated Environments
-Proven delivery in government, utilities, and enterprise environments.
-Compliance-aware architecture that meets the bar without over-engineering.
+[H3] Governance in Regulated Environments
+Proven delivery in government, utilities, and enterprise. Data boundaries, audit
+logging, human-in-loop controls, and compliance-aware architecture that meets the
+bar without over-engineering.
 
 --------------------------------------------------------------------------------
-SECTION: Selected Work (2 cards)
+SECTION: Enterprise Automation for AI-Enabled Systems
 --------------------------------------------------------------------------------
-[H2] Selected Work
-[Subtitle] Architecture and delivery engagements across integration, security,
-and automation.
+[H2] Enterprise Automation for AI-Enabled Systems
+
+[Intro paragraph]
+I design, deliver, and operationalise automation architectures that connect
+enterprise systems securely. AI is embedded where it adds genuine value, always
+with governance controls, human oversight, and auditability appropriate to the
+environment.
+
+[H3] What Organisations Gain
+- Auditability across every automated action and integration touchpoint
+- Predictable integration reliability with built-in error handling and retry logic
+- Security review readiness. Architecture designed to pass, not patch
+- Reduced operational friction through structured automation of manual workflows
+- Extensibility. Solutions designed for additional channels, tenants, and data sources
+
+[H3] Typical Engagements
+
+Event-driven integration and middleware
+Connecting platforms (security systems, line-of-business apps, cloud services)
+through secure middleware with real-time event processing and alerting.
+
+Workflow automation
+Replacing manual processes with structured digital workflows. Automated scoring,
+routing, notifications, and audit trails.
+
+Copilot and AI workflow integration
+Embedding AI capabilities (document intelligence, Copilot-style assistants,
+classification) into enterprise workflows with appropriate governance and
+human-in-loop controls.
+
+Secure notification systems
+mTLS, OAuth2, bearer token management, and least-privilege patterns for
+cross-platform messaging and alerting.
+
+Rules engines and human-in-the-loop
+Configurable business rules with operator dashboards. Automated actions with
+human oversight gates for high-stakes decisions.
+
+[H3] Governance by Design
+
+Data boundaries
+Clear separation of what is processed, what is stored, and what leaves the
+environment.
+
+Identity and access
+Mutual TLS, OAuth2, least-privilege service accounts, certificate lifecycle
+management.
+
+Audit logging
+Comprehensive event trails for every automated action and integration
+touchpoint.
+
+Human-in-loop controls
+AI-assisted outputs are reviewed and validated before operational use.
+Automation assists decisions; it does not make them unilaterally.
+
+--------------------------------------------------------------------------------
+SECTION: Selected Enterprise Automation Engagements (3 cards)
+--------------------------------------------------------------------------------
+[H2] Selected Enterprise Automation Engagements
+
+[Subtitle] Each engagement is delivered with governance-by-design, security
+review readiness, and full operational handover.
 
 [Card 1]
-[H3] Security Events → SMS Notifications
+[Label] Case Study
+[H3] Security Events -> SMS Notifications
 Event-driven middleware connecting Gallagher Command Centre to Telstra's
-messaging platform. mTLS, OAuth2, real-time alerting.
-→ "Read more" links to /case-studies
+messaging platform. mTLS, OAuth2, rules-based filtering, operator dashboard.
+AI-assisted engineering.
+-> "Read case study" links to /case-studies/gallagher-command-centre-sms-integration
 
 [Card 2]
+[Label] Case Study
 [H3] Structured Intake Automation
-Transforming standardised PDF assessment instruments into interactive digital
-workflows with real-time scoring.
-→ "Read more" links to /case-studies
+PDF assessment instruments transformed into interactive digital workflows.
+Canonical data modelling, automated scoring, governance-by-design.
+-> "Read case study" links to /case-studies/structured-intake-automation
+
+[Card 3]
+[Label] Case Study
+[H3] Real-Time Cross-Platform Application
+Cross-platform architecture: Expo React Native, Convex real-time backend,
+Cloudflare edge auth proxy. Type-safe end-to-end, reactive subscriptions,
+regional data partitioning.
+-> "Read case study" links to /case-studies/real-time-cross-platform-application
 
 --------------------------------------------------------------------------------
-SECTION: Apps & Support (2 cards)
+SECTION: Proof of Build Capability (2 cards)
 --------------------------------------------------------------------------------
-[H2] Apps & Support
-[Subtitle] Tools I've built. If you're using one and need help, start here.
+[H2] Proof of Build Capability
+
+[Subtitle] These products demonstrate applied architecture and build velocity.
+The same patterns, governance, and delivery discipline used in enterprise
+engagements. They are not the primary service offering.
 
 [Card 1]
 ClientForms.app
-Clinician-facing assessment workflow tool
+Clinician-facing assessment workflow platform. Structured digital forms with
+real-time scoring, canonical data modelling, and neurodivergent-friendly UX.
 Status: In Production
-→ https://clientforms.app
+-> https://clientforms.app
 
 [Card 2]
 WaitingForAMate.com
-Community referral app
+Community referral platform. Trusted-connection service discovery.
 Status: In Production
-→ https://waitingforamate.com
-
-[Link] "Visit Support Hub →" links to /support
-
---------------------------------------------------------------------------------
-SECTION: Contact CTA
---------------------------------------------------------------------------------
-[H2] Have a project? Let's talk.
-[Subtitle] I'm available for architecture and delivery engagements.
-[Button] contact@movetodigital.au
+-> https://waitingforamate.com
 
 
 ################################################################################
-PAGE 2: CASE STUDIES (/case-studies)
+PAGE 2: CASE STUDIES INDEX (/case-studies)
 ################################################################################
-Meta title: "Case Studies — Move to Digital"
-Meta description: "Selected architecture and delivery engagements."
+Meta title: "Case Studies — Move to Digital | Automation & Integration Architecture"
+Meta description: "Enterprise automation case studies: secure integration
+architecture, AI-enabled delivery, and governance-by-design for regulated
+environments. Gallagher Command Centre, Telstra API, schema-driven workflows."
+Canonical: https://movetodigital.au/case-studies
+
+Structured data: BreadcrumbList (Home > Case Studies)
 
 --------------------------------------------------------------------------------
 SECTION: Page Header
 --------------------------------------------------------------------------------
 [H1] Case Studies
-[Subtitle] Selected architecture and delivery engagements.
+
+[Subtitle] Enterprise automation and secure integration delivered with
+governance-by-design and AI-enabled engineering.
 
 --------------------------------------------------------------------------------
-CASE STUDY A: Security Events → SMS Notifications
+SECTION: Case Study Cards (3 cards, each links to individual page)
 --------------------------------------------------------------------------------
-[H2] Security Events → SMS Notifications
+
+[Card 1]
+[Badge] Independent architecture + build
+[H2] Security Events -> SMS Notifications
+[Mono subtitle] Gallagher Command Centre <-> Telstra Messaging API
+Event-driven middleware bridging Gallagher Command Centre's REST API to
+Telstra's Messaging API v3 for real-time SMS security notifications. mTLS
+authentication, OAuth2 token management, configurable rules engine, and
+operator dashboard.
+[Tags] mTLS, OAuth2, REST API, Event-Driven, Rules Engine
+-> /case-studies/gallagher-command-centre-sms-integration
+
+[Card 2]
+[Badge] Product architecture and build capability
+[H2] Structured Intake Automation
+[Mono subtitle] PDF -> Canonical Schema -> Interactive Digital Workflow
+Schema-driven architecture transforming PDF assessment instruments into
+interactive digital workflows with real-time scoring. Canonical data modelling,
+deterministic identity, and neurodivergent-first UX design.
+[Tags] Schema-Driven, SurveyJS, Real-Time Scoring, PDF Analysis, Canonical Model
+-> /case-studies/structured-intake-automation
+
+[Card 3]
+[Badge] Product architecture and build capability
+[H2] Real-Time Cross-Platform Application
+[Mono subtitle] Expo React Native <-> Convex Reactive Backend <-> Cloudflare Edge
+Cross-platform application architecture serving iOS, Android, and web from a
+single TypeScript codebase. Reactive real-time database, generated type-safe
+SDK, edge-optimised OAuth proxy, regional data partitioning, and priority
+email queue.
+[Tags] Expo, Convex, React Native, Real-Time, Cloudflare Edge, TypeScript
+-> /case-studies/real-time-cross-platform-application
+
+
+################################################################################
+PAGE 3: CASE STUDY A (/case-studies/gallagher-command-centre-sms-integration)
+################################################################################
+Meta title: "Gallagher Command Centre SMS Integration — API Bridge to Telstra Messaging | Move to Digital"
+Meta description: "How we built a secure middleware bridge connecting Gallagher
+Command Centre's REST API to Telstra's Messaging API v3 for real-time SMS
+security notifications. mTLS, OAuth2, event-driven architecture."
+Canonical: https://movetodigital.au/case-studies/gallagher-command-centre-sms-integration
+
+Structured data: TechArticle
+Keywords: Gallagher Command Centre API, Gallagher REST API, Gallagher SMS
+integration, Telstra Messaging API, mTLS, OAuth2, security event notifications,
+enterprise middleware
+
+Breadcrumb: Case Studies > Gallagher Command Centre SMS Integration
+
+--------------------------------------------------------------------------------
+[H2] Security Events -> SMS Notifications
 [Label] Independent architecture + build engagement
-[Subtitle] Gallagher Command Centre ⇄ Telstra Messaging API
+[Subtitle] Gallagher Command Centre <-> Telstra Messaging API
+--------------------------------------------------------------------------------
 
-[H3] The Problem
+[H3] Context / Problem
 The client's physical security platform (Gallagher Command Centre) generates
-critical events — door forced, access denied, alarm triggered — but has no
-native SMS notification capability. Operators needed real-time alerts on mobile,
-with filtering to prevent alert fatigue.
+critical events (door forced, access denied, alarm triggered) but has no
+native SMS notification capability. Operators needed real-time alerts on mobile
+devices, with intelligent filtering to prevent alert fatigue. The requirement was
+for a middleware bridge that could poll, process, and deliver notifications
+reliably without introducing new security risk.
 
-[H3] The Approach
+[H3] Constraints
+- Physical security environment. No tolerance for missed events or false negatives.
+- Gallagher API requires mutual TLS client certificate authentication.
+- Telstra Messaging API v3 requires OAuth2 bearer token management with automatic refresh.
+- Minimal PII handling. Event metadata only, no personal data in transit.
+- Solution must be operable by non-technical staff after handover.
+
+[H3] Solution Approach
 Designed and built an event-driven middleware bridge. The system polls
 Gallagher's REST API over mutual TLS, processes and deduplicates events through
-a rules engine, composes human-readable messages, and delivers via Telstra's
-Messaging API v3.
+a configurable rules engine, composes human-readable notification messages, and
+delivers via Telstra's Messaging API v3.
 
-[Architecture Diagram — described textually]
+[H3] Architecture
+[Architecture Diagram — interactive SVG]
 Flow: Gallagher Command Centre (Security Event Source)
-  → HTTPS / mTLS Event Polling →
+  -> HTTPS / mTLS Event Polling ->
   Bridge (Event Processor)
-    • Event Processing
-    • Deduplication
-    • Filtering Rules
-    • Audit Logging
-  → OAuth2 / REST SMS Delivery →
+    - Event Processing
+    - Deduplication
+    - Filtering Rules
+    - Audit Logging
+  -> OAuth2 / REST SMS Delivery ->
   Telstra Messaging API v3 (SMS Delivery)
   Bridge also connects to:
   Operator Dashboard (Monitoring & Configuration, Certificate Management)
+
+[H3] Automation & Integration
+- Event polling. Scheduled polling of Gallagher REST API with configurable
+  intervals and checkpoint tracking.
+- Rules engine. Configurable event filtering, deduplication, and alert routing.
+  Operators can adjust thresholds without code changes.
+- Message composition. Events are transformed into human-readable SMS
+  notifications with contextual detail.
+- Rate limiting and queuing. Message delivery is rate-limited and queued to
+  comply with Telstra API constraints and prevent notification storms.
+
+[H3] Governance & Controls
+- Identity. Gallagher API authenticated via mutual TLS client certificates.
+  Telstra API via OAuth2 bearer tokens with automatic refresh. No shared secrets.
+- Data boundaries. Event metadata only is processed. No PII is stored or
+  transmitted beyond what the notification requires. Message content is ephemeral.
+- Audit logging. Every event received, every rule evaluation, every notification
+  sent is logged with timestamps and correlation identifiers.
+- Operator controls. Non-technical operators manage filtering rules, certificate
+  renewal, and system configuration through a dashboard. No direct API or
+  database access required.
 
 [H3] Security
 All communication uses TLS 1.2+. Gallagher API access is authenticated via
 mutual TLS client certificates. Telstra API uses OAuth2 bearer tokens with
 automatic refresh. API keys are hashed with PBKDF2 and stored with AES-256
-encryption. The system handles minimal personal data — event metadata only, no
+encryption. The system handles minimal personal data, event metadata only, no
 PII in transit.
 
-[H3] Outcomes
-Delivered working middleware with an operator dashboard, certificate management,
-and comprehensive audit logging. Zero-touch deployment capability for
-non-technical operators. Deployment pending customer rollout.
+[H3] AI-Assisted Engineering
+AI tooling was used during the build phase to accelerate scaffolding, improve
+edge-case analysis, and assist with documentation generation. All AI-generated
+outputs were manually reviewed and validated before integration. AI was not used
+for operational decision-making. The rules engine and notification logic are
+deterministic. AI assisted build velocity; it did not replace engineering
+judgement.
 
-[H3] Extensibility
-Architecture supports additional notification channels (email, Teams webhooks),
-configurable filtering rules, and multi-tenant deployment. Rate limiting and
-message queuing are built in.
+[H3] Delivery Notes
+- Delivered as a complete working system: middleware, operator dashboard,
+  certificate management tooling, and audit logging.
+- Zero-touch deployment capability designed for non-technical operators.
+- Full documentation and operational runbooks provided for handover.
+- Deployment pending customer rollout scheduling.
+
+[H3] Outcomes
+- Working middleware with operator dashboard, certificate lifecycle management,
+  and comprehensive audit logging.
+- Configurable rules engine enabling non-technical staff to manage alert
+  filtering without developer intervention.
+- Architecture designed for zero-touch deployment in customer environments.
+
+[H3] Extensibility / Next Steps
+Architecture supports additional notification channels (email, Microsoft Teams
+webhooks), configurable multi-tenant deployment, and integration with additional
+event sources. Rate limiting and message queuing patterns are reusable across
+notification pipelines.
 
 [Footer label] Delivered as an independent architecture + build engagement.
 
---------------------------------------------------------------------------------
-CASE STUDY B: Structured Intake Automation
+
+################################################################################
+PAGE 4: CASE STUDY B (/case-studies/structured-intake-automation)
+################################################################################
+Meta title: "Structured Intake Automation — PDF to Digital Workflow Architecture | Move to Digital"
+Meta description: "Schema-driven architecture transforming PDF assessment
+instruments into interactive digital workflows. Canonical data modelling,
+automated scoring, governance-by-design for clinical environments."
+Canonical: https://movetodigital.au/case-studies/structured-intake-automation
+
+Structured data: TechArticle
+Keywords: PDF automation, canonical schema, SurveyJS, digital workflow,
+automated scoring, clinical assessment, schema-driven architecture,
+governance-by-design
+
+Breadcrumb: Case Studies > Structured Intake Automation
+
 --------------------------------------------------------------------------------
 [H2] Structured Intake Automation
-[Label] Product development — own IP
-[Subtitle] PDF → Digital Workflow Pipeline
+[Label] Product architecture and build capability
+[Subtitle] PDF -> Canonical Schema -> Interactive Digital Workflow
+--------------------------------------------------------------------------------
 
-[H3] The Problem
+[H3] Context / Problem
 Clinicians were spending significant time manually transcribing standardised
 assessment forms from paper and PDF into digital records. The process was
-error-prone and created workflow bottlenecks.
+error-prone, created workflow bottlenecks, and made consistent scoring difficult.
+Assessment instruments vary in structure but share common patterns (sections,
+question types, scoring rubrics) that lend themselves to a structured,
+schema-driven approach.
 
-[H3] The Approach
-Built a three-stage pipeline: PDF analysis extracts structured data into a
-canonical schema, which then generates interactive digital forms with real-time
-scoring and validation. The canonical model decouples the source format from the
-rendering engine, enabling rapid onboarding of new assessment instruments.
+[H3] Constraints
+- Clinical environment. Accuracy of scoring and data capture is non-negotiable.
+- Assessment instruments are published as static PDFs with no machine-readable
+  structure.
+- Clinician users include neurodivergent practitioners. UX must minimise
+  cognitive load, reduce visual noise, and support focused task completion.
+- Data governance requirements: clear boundaries on what is stored, where, and
+  for how long.
+
+[H3] Solution Approach
+Built a three-stage pipeline that decouples ingestion from rendering:
+
+1. PDF analysis. Source PDF instruments are analysed and structured data is
+   extracted into a canonical JSON schema. Each section, question, and scoring
+   rubric is mapped to a normalised data model.
+2. Canonical schema. The schema serves as the single source of truth, decoupling
+   the source format from the rendering engine. New instruments can be onboarded
+   by producing a schema. No UI code changes required.
+3. Interactive form rendering. Schemas are rendered as interactive digital forms
+   (SurveyJS-based) with real-time scoring, validation, and section-level
+   progress tracking.
+
+[H3] Architecture
+- Ingestion layer. PDF analysis produces canonical JSON schemas conforming to a
+  defined instrument specification.
+- Schema registry. Canonical schemas stored with versioning and deterministic
+  identity (content-derived slugs), enabling reproducible builds and eliminating
+  manual ID management.
+- Rendering engine. SurveyJS-based form renderer consumes schemas and produces
+  interactive assessments with real-time scoring.
+- Scoring engine. Automated scoring logic embedded in the schema definition.
+  Subscale calculations, reverse scoring, and threshold flagging are computed in
+  real time as the clinician completes the form.
+
+[H3] Automation & Integration
+- Schema generation. AI-assisted extraction of structure from PDF instruments,
+  with manual validation and correction at every stage.
+- Deterministic identity. Each instrument, section, and question receives a
+  content-derived slug. This eliminates brittle numeric IDs and reduces friction
+  when instruments are updated or versioned.
+- Real-time scoring. Scoring rules are defined in the schema and executed
+  client-side as forms are completed. No round-trip to a server required for
+  score calculation.
+- Instrument onboarding. Adding a new assessment instrument requires producing a
+  conforming schema. The rendering engine handles the rest.
+
+[H3] Governance & Controls
+- Data boundaries. Assessment responses are processed client-side. The platform
+  defines clear boundaries on what is persisted, what is ephemeral, and what is
+  exportable.
+- Schema validation. Instruments must conform to the canonical specification.
+  Malformed schemas are rejected at onboarding.
+- Auditability. Schema versions, scoring logic, and instrument definitions are
+  versioned and traceable.
+- Human-in-loop. AI-assisted schema extraction is always reviewed and validated
+  by a human before an instrument enters production use. AI accelerates the
+  analysis; clinicians and architects validate the output.
+
+[H3] Security
+Assessment data is handled with appropriate sensitivity controls. The platform
+does not store identified patient data. Schema definitions and scoring logic are
+versioned and integrity-checked. Access controls and data handling follow the
+principle of least privilege.
+
+[H3] Delivery Notes
+- Designed and operated as a productised workflow automation capability, applying
+  the same governance and architecture patterns used in enterprise engagements.
+- Production deployment supporting multiple assessment instrument types.
+- Clinician-facing interface with neurodivergent-first UX: reduced visual
+  clutter, consistent navigation, clear progress indicators, and minimal
+  context-switching.
 
 [H3] Outcomes
-Platform supports multiple assessment types with automated scoring.
-Clinician-facing interface designed with neurodivergent-first UX principles.
-Active development — own IP.
+- Production platform supporting multiple standardised assessment instruments
+  with automated real-time scoring.
+- Canonical schema approach enables rapid onboarding of new instruments without
+  UI code changes.
+- Neurodivergent-friendly interface validated through clinician feedback during
+  development.
+- Deterministic identity model (content-derived slugs) eliminates a class of data
+  management errors common in form-based systems.
 
-[Footer label] Product development — own IP.
+[H3] Extensibility / Next Steps
+Schema-driven architecture supports additional instrument types, export formats,
+and integration with clinical record systems. The canonical model is designed to
+accommodate future requirements (e.g. longitudinal tracking, multi-rater
+instruments) without structural changes to the rendering or scoring engines.
 
---------------------------------------------------------------------------------
-SECTION: Contact CTA
---------------------------------------------------------------------------------
-[H2] Have a project? Let's talk.
-[Subtitle] I'm available for architecture and delivery engagements.
-[Button] contact@movetodigital.au
+[Footer label] Product architecture and build capability. Enterprise-grade
+patterns applied to product development.
 
 
 ################################################################################
-PAGE 3: ABOUT (/about)
+PAGE 5: CASE STUDY C (/case-studies/real-time-cross-platform-application)
 ################################################################################
-Meta title: "About — Move to Digital"
-Meta description: "Independent automation and integration architecture practice
-based in Brisbane, Australia."
+Meta title: "Real-Time Cross-Platform Application Architecture — Expo + Convex + Cloudflare | Move to Digital"
+Meta description: "Cross-platform application architecture: Expo React Native,
+Convex real-time backend, Cloudflare edge auth proxy. Type-safe end-to-end,
+reactive database subscriptions, multi-platform OAuth, regional data
+partitioning."
+Canonical: https://movetodigital.au/case-studies/real-time-cross-platform-application
+
+Structured data: TechArticle
+Keywords: Expo React Native, Convex backend, cross-platform architecture,
+real-time database, Cloudflare edge functions, Better Auth, TypeScript full-stack,
+reactive subscriptions
+
+Breadcrumb: Case Studies > Real-Time Cross-Platform Application
+
+--------------------------------------------------------------------------------
+[H2] Real-Time Cross-Platform Application
+[Label] Product architecture and build capability
+[Subtitle] Expo React Native <-> Convex Reactive Backend <-> Cloudflare Edge
+--------------------------------------------------------------------------------
+
+[H3] Context / Problem
+The product required a social application available on iOS, Android, and web
+from a single codebase, with real-time data synchronisation across all clients,
+multi-provider authentication (Google, Apple, email), regional content
+partitioning, and a gamification layer with leaderboards and lifecycle tracking.
+The architecture needed to support complex social graph queries, transactional
+email workflows, and edge-optimised OAuth, all while maintaining type safety
+end-to-end from database to UI.
+
+[H3] Constraints
+- Three deployment targets (iOS, Android, web) from a single TypeScript
+  codebase. No platform-specific forks.
+- Real-time data synchronisation. Changes must propagate to all connected
+  clients without manual refresh or polling.
+- Multi-provider OAuth (Google, Apple) with custom domain continuity. Users must
+  see the product domain throughout the auth flow, not the backend provider.
+- Regional data partitioning. Content catalogue varies by geography with global
+  and region-specific entries.
+- Rate-limited external APIs (email provider). System must queue, prioritise,
+  and retry without message loss.
+
+[H3] Solution Approach
+Designed and built a reactive full-stack architecture centred on Convex as the
+real-time backend, Expo (React Native) as the cross-platform client framework,
+and Cloudflare edge functions as the OAuth and static hosting layer. The
+architecture eliminates REST APIs entirely. All client-server communication uses
+generated TypeScript SDKs with automatic real-time subscriptions. Authentication
+is handled by Better Auth with a custom Cloudflare Pages Function proxy that
+rewrites OAuth redirect headers to maintain custom domain continuity.
+
+[H3] Architecture
+[Architecture Diagram — interactive SVG]
+Flow:
+  Expo Clients (iOS / Android / Web — Single TypeScript Codebase)
+    <-> Real-Time Subscriptions <->
+  Convex Backend (Reactive Database + Functions)
+    - Real-Time Database (24 tables)
+    - Better Auth (Google, Apple, Email)
+    - Generated TypeScript SDK
+    - Queries, Mutations, Actions
+    - Full-Text Search Indexes
+    - Scheduled Cron Jobs
+    - Email Queue + Rate Limiting
+    - Regional Data Partitioning
+    - Database Migrations
+  Convex also connects to:
+    <-> OAuth Proxy / Header Rewrite <-> Cloudflare Edge (Pages, Functions, SSL/DDoS/DNS)
+    -> SMTP API / Transactional -> Maileroo (Transactional Email)
+  Architecture Patterns (below):
+    Code Health Lifecycle | Social Graph Discovery
+    Denormalized Leaderboards | Priority Email Queue
+    Soft Deletes / Audit Trail | Batch Fetch Optimization
+    Regional Data Partitioning | Content-Scoped Search
+
+[H3] Automation & Integration
+- Real-time reactive subscriptions. Convex database queries automatically
+  subscribe to changes. Client components re-render when underlying data
+  changes. Zero manual cache invalidation, zero polling.
+- Generated TypeScript SDK. Backend functions (queries, mutations, actions) are
+  exposed to the client through a generated, fully-typed SDK. No REST endpoints,
+  no API versioning, no serialisation layer.
+- Edge-optimised OAuth proxy. Cloudflare Pages Function intercepts OAuth
+  callback redirects and rewrites Location headers from the backend domain to the
+  custom domain. Users see the product domain throughout the sign-in flow.
+- Multi-stage lifecycle tracking. Content entries follow a state machine
+  (active -> warning -> suspended) with configurable grace periods. Cron jobs
+  enforce time-based transitions. Users receive notifications at each stage.
+- Priority email queue. Transactional emails are queued with priority levels,
+  daily/monthly quota enforcement, and exponential backoff retry. Immediate-
+  priority emails bypass the queue; batch emails are aggregated and rate-limited.
+- Regional data partitioning. Content is region-aware with per-region seed data.
+  Queries are scoped by user region with global fallback. Regional community
+  groups enforce content isolation boundaries.
+
+[H3] Governance & Controls
+- Identity & access. Multi-provider authentication (Google OAuth, Apple Sign In,
+  email/password, magic link) via Better Auth with custom Convex adapter. Native
+  apps use platform-secure storage (SecureStore); web uses bearer tokens. Every
+  backend function verifies session ownership before data access.
+- Data boundaries. All queries are scoped to the authenticated user. Cross-user
+  operations verify ownership. Community content is isolated from private
+  content. Global search excludes community-scoped data.
+- Soft deletes & audit trail. User data is soft-deleted with deactivation
+  reasons. Removal events are logged to audit tables. No hard deletes of
+  user-generated content.
+- Rate limiting. Email dispatch is quota-controlled (daily and monthly caps).
+  Queue backpressure defers non-critical messages. External API calls retry with
+  exponential backoff.
+
+[H3] Security
+All communication uses HTTPS/TLS. Native authentication tokens are stored in
+platform-secure storage (iOS Keychain / Android Keystore via SecureStore). Web
+authentication uses signed bearer tokens via Authorization headers. OAuth flows
+are proxied through Cloudflare edge functions with header rewriting to prevent
+backend domain exposure. Database access is gated by session-verified
+functions. No direct client-to-database access. Email sending uses
+API-key-authenticated SMTP with queue-based rate limiting. Cloudflare provides
+SSL termination, DDoS protection, and DNS management.
+
+[H3] AI-Assisted Engineering
+AI tooling was used during the build phase to accelerate schema design, assist
+with complex Convex query optimisation, and generate seed data for regional
+content catalogues. Database migration scripts and email template generation were
+AI-assisted with manual review. All AI-generated code was validated through
+manual testing and Convex's type-safe compilation pipeline. AI did not make
+architectural decisions. It accelerated implementation of decisions already made.
+
+[H3] Delivery Notes
+- Delivered as a complete cross-platform system: iOS app, Android app, web
+  application, real-time backend, email infrastructure, and edge authentication
+  proxy.
+- 24-table database schema with indexing strategy, full-text search, and
+  migration framework.
+- Over-the-air update capability (Expo Updates) for rapid iteration without app
+  store review cycles.
+- Production deployment across Convex (backend), Cloudflare Pages (web + edge
+  functions), and app stores (iOS/Android).
+
+[H3] Outcomes
+- Single TypeScript codebase serving three platforms (iOS, Android, web) with
+  approximately 80% code sharing.
+- Zero-latency data synchronisation across all connected clients via reactive
+  subscriptions. No manual refresh required.
+- Custom domain OAuth flow maintaining brand continuity across Google and Apple
+  sign-in providers.
+- Type-safe data pipeline from database schema through backend functions to
+  client components. Compile-time guarantees across the full stack.
+- Regional data architecture supporting multi-geography content catalogues with
+  isolated community boundaries.
+
+[H3] Extensibility / Next Steps
+Architecture supports horizontal feature addition through new Convex functions
+and schema extensions. Real-time subscription model scales with additional data
+types without infrastructure changes. Regional partitioning can expand to new
+geographies by adding seed data. Email queue pattern is reusable for push
+notification channels. Authentication layer supports adding new OAuth providers
+through Better Auth plugin configuration.
+
+[Footer label] Product architecture and build capability. Full-stack
+cross-platform delivery demonstrating end-to-end system design.
+
+
+################################################################################
+PAGE 6: ABOUT (/about)
+################################################################################
+Meta title: "About — Move to Digital | Automation Solutions Architect"
+Meta description: "Automation solutions architect with 20+ years in government,
+utilities, and enterprise. AI-enabled delivery, governance-by-design, and secure
+integration. Brisbane, Australia."
+Canonical: https://movetodigital.au/about
 
 --------------------------------------------------------------------------------
 SECTION: Page Header
@@ -230,13 +689,40 @@ I'm an automation and integration architect based in Brisbane, Australia, with
 over 20 years of experience across government, utilities, and enterprise
 environments.
 
-My work focuses on the space between systems — building secure, event-driven
-integrations that connect platforms reliably and pass security review. I've
-delivered across the M365 ecosystem, API development, information governance,
-and cloud infrastructure.
+My work focuses on the space between systems, designing and building secure,
+event-driven integrations that connect platforms reliably and pass security
+review. I've delivered across the M365 ecosystem, API development, information
+governance, cloud infrastructure, and AI-enabled automation workflows.
 
-I now operate as an independent practice — Move to Digital — taking on
-architecture and delivery engagements, and building my own software products.
+I operate through Move to Digital, delivering architecture and build engagements
+and remaining open to permanent roles and long-term embedded positions where the
+work is a strong fit.
+
+--------------------------------------------------------------------------------
+SECTION: AI & Governance
+--------------------------------------------------------------------------------
+[H2] AI & Governance
+
+I embed AI into enterprise workflows where it adds genuine value, including
+document intelligence, schema extraction, build acceleration, and edge-case
+analysis, but always within a governance framework appropriate to the
+environment.
+
+Data boundaries. Clear separation of what AI processes, what it returns, and
+what is stored. No uncontrolled data exfiltration to external services.
+
+Human-in-loop controls. AI-generated outputs are reviewed and validated before
+operational use. Automation assists decisions; it does not make them
+autonomously.
+
+Audit logging. Where AI is used in a workflow, the inputs, outputs, and human
+review decisions are logged and traceable.
+
+Risk-aware design. AI capabilities are scoped to tasks where the failure mode is
+acceptable and recoverable. High-stakes decisions remain with humans.
+
+This is not AI for its own sake. It is AI applied with the same engineering
+discipline as any other component in a regulated system.
 
 --------------------------------------------------------------------------------
 SECTION: How I Work (4-step process)
@@ -256,6 +742,20 @@ Step 4: Handover
 Documentation, runbooks, and knowledge transfer. You own it completely.
 
 --------------------------------------------------------------------------------
+SECTION: What I Deliver
+--------------------------------------------------------------------------------
+[H2] What I Deliver
+
+Every engagement produces tangible artefacts, not just working code:
+
+- Architecture diagrams and decision records
+- Integration specifications and API contracts
+- Security notes and threat considerations
+- Operational runbooks and deployment guides
+- Handover documentation sufficient for your team to own and maintain the
+  solution independently
+
+--------------------------------------------------------------------------------
 SECTION: Principles
 --------------------------------------------------------------------------------
 [H2] Principles
@@ -263,35 +763,30 @@ SECTION: Principles
 - Every engagement includes documentation and runbooks. If I build it, you can
   maintain it.
 - Security review is part of the architecture, not a gate at the end.
-- AI-assisted development where it adds genuine value, not as a talking point.
+- AI is used where it adds genuine value, with appropriate governance, not as a
+  marketing claim.
 
 --------------------------------------------------------------------------------
 SECTION: Contact Links
 --------------------------------------------------------------------------------
-LinkedIn →
-contact@movetodigital.au →
-
---------------------------------------------------------------------------------
-SECTION: Contact CTA
---------------------------------------------------------------------------------
-[H2] Have a project? Let's talk.
-[Subtitle] I'm available for architecture and delivery engagements.
-[Button] contact@movetodigital.au
+LinkedIn ->
+contact@movetodigital.au ->
 
 
 ################################################################################
-PAGE 4: SUPPORT (/support)
+PAGE 7: SUPPORT (/support)
 ################################################################################
 Meta title: "Support — Move to Digital"
-Meta description: "Support hub for Move to Digital applications. Get help with
+Meta description: "Product support for Move to Digital applications.
 ClientForms.app and WaitingForAMate.com."
+Canonical: https://movetodigital.au/support
 
 --------------------------------------------------------------------------------
 SECTION: Page Header
 --------------------------------------------------------------------------------
-[H1] Apps & Support
-[Subtitle] If you're using one of my apps and need help, you're in the right
-place.
+[H1] Product Support
+
+[Subtitle] Support for Move to Digital applications.
 
 --------------------------------------------------------------------------------
 SECTION: App Cards (2 cards)
@@ -302,13 +797,13 @@ ClientForms.app
 Clinician-facing assessment workflow tool. Structured digital forms with
 real-time scoring for clinical practice.
 Status: In Production
-→ https://clientforms.app
+-> https://clientforms.app
 
 [Card 2]
 WaitingForAMate.com
 Community referral app. Share and discover services through trusted connections.
 Status: In Production
-→ https://waitingforamate.com
+-> https://waitingforamate.com
 
 --------------------------------------------------------------------------------
 SECTION: Support Policy (3 columns)
@@ -333,19 +828,14 @@ SECTION: System Status
 ● All systems operational
 Status is updated manually. For real-time issues, contact support.
 
---------------------------------------------------------------------------------
-SECTION: Contact CTA
---------------------------------------------------------------------------------
-[H2] Have a project? Let's talk.
-[Subtitle] I'm available for architecture and delivery engagements.
-[Button] contact@movetodigital.au
-
 
 ################################################################################
-PAGE 5: PRIVACY (/privacy)
+PAGE 8: PRIVACY (/privacy)
 ################################################################################
 Meta title: "Privacy — Move to Digital"
-Meta description: "Privacy practices for Move to Digital and its applications."
+Meta description: "Privacy information for movetodigital.au and related
+applications."
+Canonical: https://movetodigital.au/privacy
 
 --------------------------------------------------------------------------------
 SECTION: Page Header
@@ -363,7 +853,7 @@ tracking scripts, or analytics. No personal data is collected through browsing
 this site.
 
 If you contact me via email, I'll handle your information with the care you'd
-expect — used only to respond to your enquiry, not shared with third parties,
+expect. Used only to respond to your enquiry, not shared with third parties,
 and deleted when no longer needed.
 
 --------------------------------------------------------------------------------
@@ -385,11 +875,12 @@ contact@movetodigital.au
 
 
 ################################################################################
-PAGE 6: SECURITY (/security)
+PAGE 9: SECURITY (/security)
 ################################################################################
 Meta title: "Security — Move to Digital"
-Meta description: "Responsible disclosure policy for Move to Digital
-applications and services."
+Meta description: "Responsible disclosure policy and security reporting for Move
+to Digital applications."
+Canonical: https://movetodigital.au/security
 
 --------------------------------------------------------------------------------
 SECTION: Page Header
